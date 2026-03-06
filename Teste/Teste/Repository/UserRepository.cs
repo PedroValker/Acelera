@@ -12,9 +12,9 @@ namespace Teste.Repository
     {
         public void Salvar(User user)
         {
-            string documentosPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string pastaProjeto = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\"));
 
-            string pastaCadastro = Path.Combine(documentosPath, "cadastroUsers");
+            string pastaCadastro = Path.Combine(pastaProjeto, "cadastroUsers");
 
             if (!Directory.Exists(pastaCadastro))
             {
