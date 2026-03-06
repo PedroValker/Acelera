@@ -1,11 +1,12 @@
-﻿using Teste.ViewModels;
+﻿using Teste.ViewModel;
+using System;
 using System.Windows;
 
-namespace CadastroTela
+namespace Teste
 {
     public partial class MainWindow : Window
     {
-        MainViewModel vm = new MainViewModel();
+        CadastroViewModel vm = new CadastroViewModel();
 
         public MainWindow()
         {

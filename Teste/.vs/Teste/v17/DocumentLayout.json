@@ -1,37 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\aluno\\source\\repos\\Acelera\\Teste\\",
+  "WorkspaceRootPath": "C:\\Users\\aluno\\Documents\\Acelera\\Teste\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\aluno\\source\\repos\\acelera\\teste\\teste\\mainviewmodel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\mainviewmodel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\aluno\\documents\\acelera\\teste\\teste\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\aluno\\source\\repos\\acelera\\teste\\teste\\mainviewmodel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\mainviewmodel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\aluno\\source\\repos\\acelera\\teste\\teste\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\aluno\\source\\repos\\acelera\\teste\\teste\\teste.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\teste.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\aluno\\documents\\acelera\\teste\\teste\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\aluno\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\aluno\\source\\repos\\acelera\\teste\\teste\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\aluno\\source\\repos\\acelera\\teste\\teste\\viewmodel\\cadastroviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\viewmodel\\cadastroviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\aluno\\source\\repos\\acelera\\teste\\teste\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\aluno\\documents\\acelera\\teste\\teste\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,109 +25,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ResourcePart.cs",
-              "DocumentMoniker": "C:\\Users\\aluno\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs",
-              "ToolTip": "C:\\Users\\aluno\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs [Somente Leitura]",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs [Somente Leitura]",
-              "ViewState": "AgIAABQAAAAAAAAAAAAiwBsAAAAPAAAAAQAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T11:32:42.25Z",
-              "EditorCaption": " [Somente Leitura]"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CadastroViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\aluno\\source\\repos\\Acelera\\Teste\\Teste\\ViewModel\\CadastroViewModel.cs",
-              "RelativeDocumentMoniker": "Teste\\ViewModel\\CadastroViewModel.cs",
-              "ToolTip": "C:\\Users\\aluno\\source\\repos\\Acelera\\Teste\\Teste\\ViewModel\\CadastroViewModel.cs",
-              "RelativeToolTip": "Teste\\ViewModel\\CadastroViewModel.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAArwBwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T11:02:48.037Z",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\aluno\\Documents\\Acelera\\Teste\\Teste\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Teste\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\aluno\\Documents\\Acelera\\Teste\\Teste\\MainWindow.xaml",
+              "RelativeToolTip": "Teste\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-06T13:34:33.223Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Users\\aluno\\source\\repos\\Acelera\\Teste\\Teste\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "Teste\\AssemblyInfo.cs",
-              "ToolTip": "C:\\Users\\aluno\\source\\repos\\Acelera\\Teste\\Teste\\AssemblyInfo.cs",
-              "RelativeToolTip": "Teste\\AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ResourcePart.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs",
+              "ToolTip": "C:\\Users\\aluno\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs [Somente Leitura]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs [Somente Leitura]",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwCcAAAAEAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T11:01:03.144Z",
+              "WhenOpened": "2026-03-06T13:33:49.662Z",
+              "EditorCaption": " [Somente Leitura]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Documents\\Acelera\\Teste\\Teste\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Teste\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\aluno\\Documents\\Acelera\\Teste\\Teste\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Teste\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAwwBYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T13:33:42.37Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Teste",
-              "DocumentMoniker": "C:\\Users\\aluno\\source\\repos\\Acelera\\Teste\\Teste\\Teste.csproj",
-              "RelativeDocumentMoniker": "Teste\\Teste.csproj",
-              "ToolTip": "C:\\Users\\aluno\\source\\repos\\Acelera\\Teste\\Teste\\Teste.csproj",
-              "RelativeToolTip": "Teste\\Teste.csproj",
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\aluno\\Documents\\Acelera\\Teste\\Teste\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Teste\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\aluno\\Documents\\Acelera\\Teste\\Teste\\App.xaml.cs",
+              "RelativeToolTip": "Teste\\App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-05T10:47:34.273Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\aluno\\source\\repos\\Acelera\\Teste\\Teste\\Model\\User.cs",
-              "RelativeDocumentMoniker": "Teste\\Model\\User.cs",
-              "ToolTip": "C:\\Users\\aluno\\source\\repos\\Acelera\\Teste\\Teste\\Model\\User.cs",
-              "RelativeToolTip": "Teste\\Model\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T10:47:48.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\aluno\\source\\repos\\Acelera\\Teste\\Teste\\Repository\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Teste\\Repository\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\aluno\\source\\repos\\Acelera\\Teste\\Teste\\Repository\\UserRepository.cs",
-              "RelativeToolTip": "Teste\\Repository\\UserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T10:42:01.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainViewModel.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\aluno\\source\\repos\\Acelera\\Teste\\Teste\\MainViewModel.xaml.cs",
-              "RelativeDocumentMoniker": "Teste\\MainViewModel.xaml.cs",
-              "ToolTip": "C:\\Users\\aluno\\source\\repos\\Acelera\\Teste\\Teste\\MainViewModel.xaml.cs",
-              "RelativeToolTip": "Teste\\MainViewModel.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T13:29:23.377Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainViewModel.xaml",
-              "DocumentMoniker": "C:\\Users\\aluno\\source\\repos\\Acelera\\Teste\\Teste\\MainViewModel.xaml",
-              "RelativeDocumentMoniker": "Teste\\MainViewModel.xaml",
-              "ToolTip": "C:\\Users\\aluno\\source\\repos\\Acelera\\Teste\\Teste\\MainViewModel.xaml",
-              "RelativeToolTip": "Teste\\MainViewModel.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-04T13:29:26.944Z",
+              "WhenOpened": "2026-03-06T13:28:24.904Z",
               "EditorCaption": ""
             }
           ]
