@@ -28,5 +28,44 @@ namespace Teste.Repository
 
             File.AppendAllText(arquivoCadastro, dadosCadastro, Encoding.UTF8);
         }
+
+        public User BuscarPorEmail(string email)
+        {
+            string pastaProjeto = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\"));
+
+            string pastaCadastro = Path.Combine(pastaProjeto, "cadastroUsers");
+
+            string arquivoCadastro = Path.Combine(pastaCadastro, "cadastroUsers.txt");
+
+            if (!File.Exists(arquivoCadastro))
+            {
+                return null;
+            }
+
+            var linhas = File.ReadAllLines(arquivoCadastro);
+
+            foreach (var linha in linhas)
+            {
+                var partes = linha.Split('|');
+
+                string nome = partes[0].Replace("Nome:", "").Trim();
+                string emailArquivo = partes[1].Replace("Email:", "").Trim();
+                string telefone = partes[2].Replace("Telefone:", "").Trim();
+                string senha = partes[3].Replace("Senha:", "").Trim();
+
+                if (emailArquivo == email)
+                {
+                    return new User
+                    {
+                        Nome = nome,
+                        Email = emailArquivo,
+                        Telefone = telefone,
+                        Senha = senha
+                    };
+                }
+            }
+
+            return null;
+        }
     }
 }

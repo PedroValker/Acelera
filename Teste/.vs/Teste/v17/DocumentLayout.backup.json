@@ -37,9 +37,9 @@
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\aluno\\Documents\\Acelera\\Teste\\Teste\\Repository\\UserRepository.cs",
               "RelativeDocumentMoniker": "Teste\\Repository\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\aluno\\Documents\\Acelera\\Teste\\Teste\\Repository\\UserRepository.cs",
-              "RelativeToolTip": "Teste\\Repository\\UserRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAIwA0AAAAJAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\aluno\\Documents\\Acelera\\Teste\\Teste\\Repository\\UserRepository.cs*",
+              "RelativeToolTip": "Teste\\Repository\\UserRepository.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-06T14:14:31.528Z",
               "EditorCaption": ""
@@ -91,10 +91,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-06T13:28:24.904Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
