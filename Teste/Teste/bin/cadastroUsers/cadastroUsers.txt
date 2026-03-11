@@ -1,1 +1,5 @@
 ﻿Nome:mayara  | Email:mayara | Telefone:mayara  | Senha:mayara | Data:06/03/2026 11:16:58
+Nome:pedro | Email:teste@gmail.com | Telefone:129991239321 | Senha:123 | Data:11/03/2026 10:16:45
+Nome:tet | Email:tete | Telefone:tetete | Senha:123 | Data:11/03/2026 10:18:57
+Nome:Gabriel Martines  | Email:Martines@gmail.com | Telefone:12991080134 | Senha:123G | Data:11/03/2026 10:47:14
+Nome:Teste teste teste | Email:teste@gmail.com | Telefone:12991080134 | Senha:123Teste | Data:11/03/2026 10:49:39

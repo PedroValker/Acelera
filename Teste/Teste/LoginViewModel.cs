@@ -1,4 +1,4 @@
-using System;
+Ôªøusing System;
 using Teste.Models;
 using Teste.Repository;
 
@@ -8,18 +8,18 @@ namespace Teste.ViewModel
     {
         public User FazerLogin(string email, string senha)
         {
-            UserRepository repo = new UserRepository();
+            UserRepository repository = new UserRepository();
 
-            User usuario = repo.BuscarPorEmail(email);
+            User usuario = repository.BuscarPorEmail(email);
 
             if (usuario == null)
             {
-                throw new Exception("Usu·rio n„o encontrado!");
+                throw new Exception("Usu√°rio n√£o encontrado.");
             }
 
             if (usuario.Senha != senha)
             {
-                throw new Exception("Senha incorreta!");
+                throw new Exception("Senha incorreta.");
             }
 
             return usuario;
