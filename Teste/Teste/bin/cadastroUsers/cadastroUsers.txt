@@ -3,3 +3,5 @@ Nome:pedro | Email:teste@gmail.com | Telefone:129991239321 | Senha:123 | Data:11
 Nome:tet | Email:tete | Telefone:tetete | Senha:123 | Data:11/03/2026 10:18:57
 Nome:Gabriel Martines  | Email:Martines@gmail.com | Telefone:12991080134 | Senha:123G | Data:11/03/2026 10:47:14
 Nome:Teste teste teste | Email:teste@gmail.com | Telefone:12991080134 | Senha:123Teste | Data:11/03/2026 10:49:39
+Nome:vitoria | Email:vi@gmail.com | Telefone:12991090134 | Senha:1234 | Data:11/03/2026 11:59:29
+Nome:Ricardo | Email:ricardo@gmail.com | Telefone:12991080134 | Senha:12345 | Data:11/03/2026 12:04:55
