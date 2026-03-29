@@ -48,7 +48,7 @@ namespace Teste
 
                 MessageBox.Show("Conta criada com sucesso!");
 
-                LoginView login = new LoginView();
+                Login login = new Login();
                 login.Show();
 
                 this.Close();
@@ -81,7 +81,7 @@ namespace Teste
         private void Entrar_Click(object sender, RoutedEventArgs e)
         {
             // Abre a janela de Login
-            LoginView loginWindow = new LoginView();
+            Login loginWindow = new Login();
             loginWindow.Show();
 
             // Fecha a janela atual (Cadastro)

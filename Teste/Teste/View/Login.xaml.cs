@@ -1,65 +1,79 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Input;
-using Teste.Models;
 using Teste.ViewModel;
+using Teste.Models;
 
 namespace Teste
 {
-    public partial class LoginView : Window
+    public partial class Login : Window
     {
-        public LoginView()
+        private bool senhaVisivel = false;
+
+        public Login()
         {
             InitializeComponent();
         }
 
-        // BOTÃO ENTRAR
+        private void ToggleSenha_Click(object sender, RoutedEventArgs e)
+        {
+            if (senhaVisivel)
+            {
+                SenhaBox.Password = SenhaVisivelBox.Text;
+                SenhaBox.Visibility = Visibility.Visible;
+                SenhaVisivelBox.Visibility = Visibility.Collapsed;
+
+                BotaoSenha.Content = "Ver senha";
+            }
+            else
+            {
+                SenhaVisivelBox.Text = SenhaBox.Password;
+                SenhaVisivelBox.Visibility = Visibility.Visible;
+                SenhaBox.Visibility = Visibility.Collapsed;
+
+                BotaoSenha.Content = "Esconder senha";
+            }
+
+            senhaVisivel = !senhaVisivel;
+        }
+
+        private void SenhaBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            SenhaPlaceholder.Visibility = string.IsNullOrEmpty(SenhaBox.Password)
+                ? Visibility.Visible
+                : Visibility.Collapsed;
+        }
+
+        private void SenhaVisivelBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            SenhaPlaceholder.Visibility = string.IsNullOrEmpty(SenhaVisivelBox.Text)
+                ? Visibility.Visible
+                : Visibility.Collapsed;
+        }
+
         private void BotaoEntrar_Click(object sender, RoutedEventArgs e)
         {
             string email = EmailBox.Text;
-            string senha = SenhaBox.Password;
-
-            // Validação simples
-            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(senha))
-            {
-                MessageBox.Show("Por favor, preencha todos os campos.",
-                                "Aviso",
-                                MessageBoxButton.OK,
-                                MessageBoxImage.Warning);
-                return;
-            }
+            string senha = senhaVisivel ? SenhaVisivelBox.Text : SenhaBox.Password;
 
             try
             {
                 LoginViewModel vm = new LoginViewModel();
+                User user = vm.FazerLogin(email, senha);
 
-                User usuario = vm.FazerLogin(email, senha);
-
-                MessageBox.Show($"Login realizado com sucesso! Bem-vindo, {usuario.Nome}.",
-                                "Sucesso",
-                                MessageBoxButton.OK,
-                                MessageBoxImage.Information);
-
-                // Precisar se alterado: Adicionar a tela do usuario logado
-                MainWindow telaPrincipal = new MainWindow();
-                telaPrincipal.Show();
-
-                this.Close();
+                MessageBox.Show($"Bem-vindo, {user.Nome}!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,
-                                "Erro no Login",
-                                MessageBoxButton.OK,
-                                MessageBoxImage.Error);
+                MessageBox.Show(ex.Message);
             }
         }
 
-        // LINK PARA IR PARA CADASTRO
         private void AbrirCadastro_Click(object sender, MouseButtonEventArgs e)
         {
             MainWindow cadastro = new MainWindow();
             cadastro.Show();
+
             this.Close();
         }
     }

@@ -8,21 +8,17 @@ namespace Teste.ViewModel
     {
         public User FazerLogin(string email, string senha)
         {
-            UserRepository repository = new UserRepository();
+            UserRepository repo = new UserRepository();
 
-            User usuario = repository.BuscarPorEmail(email);
+            User user = repo.BuscarPorEmail(email);
 
-            if (usuario == null)
-            {
-                throw new Exception("Usuário não encontrado.");
-            }
+            if (user == null)
+                throw new Exception("Usuário não encontrado");
 
-            if (usuario.Senha != senha)
-            {
-                throw new Exception("Senha incorreta.");
-            }
+            if (user.Senha != senha)
+                throw new Exception("Senha incorreta");
 
-            return usuario;
+            return user;
         }
     }
 }
