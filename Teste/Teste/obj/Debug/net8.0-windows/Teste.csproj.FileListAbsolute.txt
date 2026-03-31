@@ -57,8 +57,6 @@ C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\refint\Tes
 C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\Teste.pdb
 C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\Teste.genruntimeconfig.cache
 C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\ref\Teste.dll
-C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\MainWindow.baml
-C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\pedro\Downloads\Acelera\Teste\Teste\bin\Debug\net8.0-windows\Teste.exe
 C:\Users\pedro\Downloads\Acelera\Teste\Teste\bin\Debug\net8.0-windows\Teste.deps.json
 C:\Users\pedro\Downloads\Acelera\Teste\Teste\bin\Debug\net8.0-windows\Teste.runtimeconfig.json
@@ -125,3 +123,7 @@ D:\acelera\Teste\Teste\obj\Debug\net8.0-windows\refint\Teste.dll
 D:\acelera\Teste\Teste\obj\Debug\net8.0-windows\Teste.pdb
 D:\acelera\Teste\Teste\obj\Debug\net8.0-windows\Teste.genruntimeconfig.cache
 D:\acelera\Teste\Teste\obj\Debug\net8.0-windows\ref\Teste.dll
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Login.baml
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\MainWindow.baml
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Login.g.cs
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\MainWindow.g.cs

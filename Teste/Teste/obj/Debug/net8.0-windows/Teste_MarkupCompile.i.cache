@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\acelera\Teste\Teste\obj\Debug\net8.0-windows\
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\
 Teste
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-D:\acelera\Teste\Teste\App.xaml
-21463059920
+C:\Users\aluno\Documents\Acelera\Teste\Teste\App.xaml
+3-465409792
 
-111356036427
-198-73713260
-View\Login.xaml;View\MainWindow.xaml;
+13235563642
+198-1831388575
+View\CadastroProduto.xaml;View\Login.xaml;View\MainWindow.xaml;
 
 False
 

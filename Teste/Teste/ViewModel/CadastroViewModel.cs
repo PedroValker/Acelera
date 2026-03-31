@@ -23,7 +23,12 @@ namespace Teste.ViewModel
             };
 
             UserRepository repo = new UserRepository();
-            repo.Salvar(usuario);
+
+            // Usando o novo método com validação
+            if (!repo.Salvar(usuario, out string mensagemErro))
+            {
+                throw new Exception(mensagemErro);
+            }
         }
     }
 }

@@ -1,96 +1,81 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Teste.Models;
+using System.IO;
+using System.Collections.Generic;
 
 namespace Teste.Repository
 {
     class UserRepository
     {
-      
-        public void Salvar(User user)
+        // Salva usuário na memória, mas só se passar as validações
+        public void CarregarDoArquivo()
         {
-            string pastaProjeto = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\"));
+            string pastaProjeto = Path.GetFullPath(
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\")
+            );
 
-            string pastaCadastro = Path.Combine(pastaProjeto, "cadastroUsers");
+            string caminho = Path.Combine(pastaProjeto, "cadastroUsers", "cadastroUsers.txt");
 
-            if (!Directory.Exists(pastaCadastro))
+            if (!File.Exists(caminho))
+                return;
+
+            var linhas = File.ReadAllLines(caminho);
+
+            foreach (var linha in linhas)
             {
-                Directory.CreateDirectory(pastaCadastro);
+                var partes = linha.Split('|');
+
+                MemoriaUsuarios.Lista.Add(new User
+                {
+                    Nome = partes[0].Replace("Nome:", "").Trim(),
+                    Email = partes[1].Replace("Email:", "").Trim(),
+                    Telefone = partes[2].Replace("Telefone:", "").Trim(),
+                    Senha = partes[3].Replace("Senha:", "").Trim()
+                });
+            }
+        }
+        public bool Salvar(User user, out string mensagemErro)
+        {
+            mensagemErro = "";
+
+            // Validações básicas
+            if (string.IsNullOrWhiteSpace(user.Nome) ||
+                string.IsNullOrWhiteSpace(user.Email) ||
+                string.IsNullOrWhiteSpace(user.Senha))
+            {
+                mensagemErro = "Nome, Email e Senha são obrigatórios.";
+                return false;
             }
 
-            string arquivoCadastro = Path.Combine(pastaCadastro, "cadastroUsers.txt");
+            // Verifica se email já existe
+            if (BuscarPorEmail(user.Email) != null)
+            {
+                mensagemErro = "Este email já está cadastrado.";
+                return false;
+            }
 
-            string dadosCadastro =
-                $"Nome:{user.Nome} | Email:{user.Email} | Telefone:{user.Telefone} | Senha:{user.Senha} | Data:{user.DataCriacao}\n";
+            // Verifica se senha já existe
+            if (SenhaExiste(user.Senha))
+            {
+                mensagemErro = "Esta senha já está em uso, escolha outra.";
+                return false;
+            }
 
-            File.AppendAllText(arquivoCadastro, dadosCadastro, Encoding.UTF8);
+            // Se passou tudo, adiciona na memória
+            MemoriaUsuarios.Lista.Add(user);
+            return true;
         }
 
-        // Verifica se a senha já existe no arquivo de cadastro
         public bool SenhaExiste(string senha)
         {
-            string pastaProjeto = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\"));
-            string pastaCadastro = Path.Combine(pastaProjeto, "cadastroUsers");
-            string arquivoCadastro = Path.Combine(pastaCadastro, "cadastroUsers.txt");
-
-            if (!File.Exists(arquivoCadastro))
-                return false;
-
-            var linhas = File.ReadAllLines(arquivoCadastro);
-
-            foreach (var linha in linhas)
-            {
-                var partes = linha.Split('|');
-                if (partes.Length < 4) continue;
-
-                string senhaArquivo = partes[3].Replace("Senha:", "").Trim();
-                if (senhaArquivo == senha)
-                    return true;
-            }
-
-            return false;
+            return MemoriaUsuarios.Lista.Any(u => u.Senha == senha);
         }
+
         public User BuscarPorEmail(string email)
         {
-            string pastaProjeto = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\"));
-
-            string pastaCadastro = Path.Combine(pastaProjeto, "cadastroUsers");
-
-            string arquivoCadastro = Path.Combine(pastaCadastro, "cadastroUsers.txt");
-
-            if (!File.Exists(arquivoCadastro))
-            {
-                return null;
-            }
-
-            var linhas = File.ReadAllLines(arquivoCadastro);
-
-            foreach (var linha in linhas)
-            {
-                var partes = linha.Split('|');
-
-                string nome = partes[0].Replace("Nome:", "").Trim();
-                string emailArquivo = partes[1].Replace("Email:", "").Trim();
-                string telefone = partes[2].Replace("Telefone:", "").Trim();
-                string senha = partes[3].Replace("Senha:", "").Trim();
-
-                if (emailArquivo == email)
-                {
-                    return new User
-                    {
-                        Nome = nome,
-                        Email = emailArquivo,
-                        Telefone = telefone,
-                        Senha = senha
-                    };
-                }
-            }
-
-            return null;
+            return MemoriaUsuarios.Lista
+                .FirstOrDefault(u => u.Email == email);
         }
     }
 }
