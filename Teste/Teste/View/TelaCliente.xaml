@@ -1,0 +1,109 @@
+﻿<Window x:Class="TelaClientes.TelaCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:TelaClientes.ViewModels"
+        Title="Clientes" Height="520" Width="950"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F6FA">
+
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Background="#1E3AFF" Grid.Column="0">
+            <StackPanel Margin="20">
+
+                <TextBlock Text="Basic"
+                           Foreground="White"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Margin="0,10"/>
+
+                <TextBlock Text="Olá, Carlos Gil"
+                           Foreground="#D6DBFF"
+                           Margin="0,0,0,30"/>
+
+               
+                <StackPanel>
+
+                    <TextBlock Text="Pedidos" Style="{StaticResource MenuItem}"/>
+                    <TextBlock Text="Produtos" Style="{StaticResource MenuItem}"/>
+                    <TextBlock Text="Pendências" Style="{StaticResource MenuItem}"/>
+                    <TextBlock Text="Estatísticas" Style="{StaticResource MenuItem}"/>
+
+                   
+                    <Border Background="#3D5AFE" CornerRadius="8" Padding="5">
+                        <TextBlock Text="Clientes" Style="{StaticResource MenuItem}" FontWeight="Bold"/>
+                    </Border>
+
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>
+
+      
+        <Grid Grid.Column="1" Margin="20">
+
+            <StackPanel>
+
+
+                <TextBlock Text="Clientes"
+                           FontSize="26"
+                           FontWeight="Bold"/>
+
+                <TextBlock Text="Total de Clientes: 87"
+                           Foreground="Gray"
+                           Margin="0,5,0,20"/>
+
+                <Border Background="White"
+                        CornerRadius="10"
+                        Padding="15"
+                        >
+
+                    <DataGrid ItemsSource="{Binding Clientes}"
+                              AutoGenerateColumns="False"
+                              BorderThickness="0"
+                              HeadersVisibility="Column"
+                              RowHeight="35"
+                              GridLinesVisibility="None">
+
+                        <DataGrid.Resources>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="Background" Value="#F1F3F6"/>
+                            </Style>
+                        </DataGrid.Resources>
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*"/>
+                            <DataGridTextColumn Header="E-mail" Binding="{Binding Email}" Width="*"/>
+                            <DataGridTextColumn Header="Cidade" Binding="{Binding Cidade}" Width="*"/>
+                        </DataGrid.Columns>
+
+                    </DataGrid>
+
+                </Border>
+
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+
+    <Window.Resources>
+
+        <Style x:Key="MenuItem" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="5,10"/>
+        </Style>
+
+    </Window.Resources>
+
+</Window>
