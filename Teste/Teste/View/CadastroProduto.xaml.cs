@@ -1,5 +1,6 @@
 ﻿using System.Windows;
-
+using Teste.Models;
+using System.Windows.Controls;
 namespace Teste
 {
     public partial class CadastroProdutos : Window
@@ -28,7 +29,7 @@ namespace Teste
                 Marca = MarcaBox.Text,
                 Categoria = (CategoriaBox.SelectedItem as ComboBoxItem)?.Content.ToString(),
                 Preco = decimal.Parse(PrecoBox.Text),
-                Descricao = DescricaoBox.Text
+            
             };
 
             MessageBox.Show("Produto cadastrado com sucesso!");
@@ -38,16 +39,7 @@ namespace Teste
             MarcaBox.Clear();
             CategoriaBox.SelectedIndex = -1;
             PrecoBox.Clear();
-            DescricaoBox.Clear();
         }
     }
 
-    public class Produto
-    {
-        public string Nome { get; set; }
-        public string Marca { get; set; }
-        public string Categoria { get; set; }
-        public decimal Preco { get; set; }
-        public string Descricao { get; set; }
-    }
 }

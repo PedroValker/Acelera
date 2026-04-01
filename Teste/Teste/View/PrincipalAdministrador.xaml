@@ -1,0 +1,100 @@
+﻿<Window x:Class="DashboardCestas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dashboard" Height="600" Width="1000">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- MENU LATERAL -->
+        <StackPanel Background="#1E2AD2" Grid.Column="0" Padding="20">
+
+            <!-- TOPO -->
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,30">
+                <TextBlock Text="🧺" FontSize="26" Margin="0,0,10,0"/>
+                <TextBlock Text="Basic" 
+                           Foreground="White" 
+                           FontSize="20"
+                           VerticalAlignment="Center"
+                           FontWeight="SemiBold"/>
+            </StackPanel>
+
+            <!-- USUÁRIO -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,40">
+
+                <Ellipse Width="40" Height="40" Margin="0,0,10,0">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="https://i.pravatar.cc/100"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+
+                <TextBlock Text="Olá, Carlos Gil"
+                           Foreground="White"
+                           VerticalAlignment="Center"
+                           FontSize="14"/>
+            </StackPanel>
+
+            <!-- MENU -->
+            <StackPanel>
+
+                <TextBlock Text="Pedidos" Foreground="White" FontSize="16" Margin="0,15" Cursor="Hand"/>
+                <TextBlock Text="Cadastrar Produtos" Foreground="White" FontSize="16" Margin="0,15" Cursor="Hand"/>
+                <TextBlock Text="Pendências" Foreground="White" FontSize="16" Margin="0,15" Cursor="Hand"/>
+                <TextBlock Text="Estatísticas" Foreground="White" FontSize="16" Margin="0,15" Cursor="Hand"/>
+                <TextBlock Text="Clientes" Foreground="White" FontSize="16" Margin="0,15" Cursor="Hand"/>
+
+            </StackPanel>
+
+        </StackPanel>
+
+        <!-- CONTEÚDO DIREITA -->
+        <Grid Grid.Column="1" Margin="20">
+
+            <StackPanel>
+
+                <TextBlock Text="Bem-vindo Carlos Gil!"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           Margin="0,0,0,20"/>
+
+                <Border Background="#F5F5F5" CornerRadius="10" Padding="20">
+
+                    <StackPanel>
+
+                        <TextBlock Text="Resumo das Cestas"
+                                   FontSize="18"
+                                   FontWeight="Bold"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="Cesta Econômica: 3200 vendas"/>
+                        <TextBlock Text="Cesta Família: 2300 vendas"/>
+                        <TextBlock Text="Cesta Especial: 1900 vendas"/>
+                        <TextBlock Text="Cesta Premium: 1400 vendas"/>
+
+                        <Separator Margin="0,10"/>
+
+                        <TextBlock Text="Total do mês: R$ 780.000,00"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Right"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- INFOS -->
+                <StackPanel Margin="10">
+                    <TextBlock Text="Pedidos a serem entregues: 8"/>
+                    <TextBlock Text="Pagamentos pendentes: 2"/>
+                    <TextBlock Text="Total de pedidos: 50"/>
+                </StackPanel>
+
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+</Window>

@@ -115,15 +115,22 @@
                         </StackPanel>
                     </Border>
 
-                    <!-- Descrição -->
+                    <!-- Lista de Produtos -->
                     <Border Style="{StaticResource InputStyle}" Grid.Row="2" Grid.ColumnSpan="2">
                         <StackPanel>
-                            <TextBlock Text="Descrição" Foreground="Gray"/>
-                            <TextBox x:Name="DescricaoBox"
-                                     Height="70"
-                                     BorderThickness="0"
-                                     Background="Transparent"
-                                     TextWrapping="Wrap"/>
+                            <TextBlock Text="Produtos Cadastrados" Foreground="Gray"/>
+
+                            <ListView x:Name="ListaProdutos" Height="200">
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Header="Nome" DisplayMemberBinding="{Binding Nome}" Width="150"/>
+                                        <GridViewColumn Header="Marca" DisplayMemberBinding="{Binding Marca}" Width="120"/>
+                                        <GridViewColumn Header="Categoria" DisplayMemberBinding="{Binding Categoria}" Width="120"/>
+                                        <GridViewColumn Header="Preço" DisplayMemberBinding="{Binding Preco}" Width="100"/>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+
                         </StackPanel>
                     </Border>
 

@@ -1,11 +1,1 @@
-﻿Nome:vicente | Email:vicente@gmail.com | Telefone:12111111111 | Senha:1234 | Data:01/01/0001 00:00:00
-Nome:mayara | Email:mayara | Telefone:mayara | Senha:mayara | Data:01/01/0001 00:00:00
-Nome:pedro | Email:teste@gmail.com | Telefone:129991239321 | Senha:123 | Data:01/01/0001 00:00:00
-Nome:tet | Email:tete | Telefone:tetete | Senha:123 | Data:01/01/0001 00:00:00
-Nome:Gabriel Martines | Email:Martines@gmail.com | Telefone:12991080134 | Senha:123G | Data:01/01/0001 00:00:00
-Nome:Teste teste teste | Email:teste@gmail.com | Telefone:12991080134 | Senha:123Teste | Data:01/01/0001 00:00:00
-Nome:vitoria | Email:vi@gmail.com | Telefone:12991090134 | Senha:1234 | Data:01/01/0001 00:00:00
-Nome:Ricardo | Email:ricardo@gmail.com | Telefone:12991080134 | Senha:12345 | Data:01/01/0001 00:00:00
-Nome:yago | Email:teste123@gmail.com | Telefone:1234567890 | Senha:yagocarai | Data:01/01/0001 00:00:00
-Nome:dasdasdasdasdsadasdadadsadadasadsadasdasdasdasdasdasdas | Email:testesexo123@gmail.com | Telefone:1234567890 | Senha:123456 | Data:01/01/0001 00:00:00
-Nome:12345678899123123123123123123123 | Email:1231231231212312312@123123123.com | Telefone:12312312312 | Senha:123123123 | Data:01/01/0001 00:00:00
+﻿

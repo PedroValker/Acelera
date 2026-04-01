@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\aluno\Documents\Acelera\Teste\Teste\App.xaml
-3-465409792
+5504481577
 
-13235563642
+19-1779278978
 198-1831388575
-View\CadastroProduto.xaml;View\Login.xaml;View\MainWindow.xaml;
+View\CadastroProduto.xaml;View\Login.xaml;View\MainWindow.xaml;View\PrincipalAdministrador.xaml;View\TelaListaCliente.xaml;
 
 False
 
