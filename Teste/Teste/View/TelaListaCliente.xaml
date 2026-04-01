@@ -19,27 +19,29 @@
         <Grid Background="#1E3AFF" Grid.Column="0">
             <StackPanel Margin="20">
 
-                <TextBlock Text="Basic"
-                           Foreground="White"
-                           FontSize="22"
-                           FontWeight="Bold"
-                           Margin="0,10"/>
+                <TextBlock Text="🛒 Basic"
+           FontSize="24"
+           Foreground="White"
+           Margin="0,0,0,30"/>
 
+              
                 <TextBlock Text="Olá, Carlos Gil"
                            Foreground="#D6DBFF"
                            Margin="0,0,0,30"/>
+                
+                
 
                
                 <StackPanel>
-
-                    <TextBlock Text="Pedidos" Style="{StaticResource MenuItem}"/>
-                    <TextBlock Text="Produtos" Style="{StaticResource MenuItem}"/>
-                    <TextBlock Text="Pendências" Style="{StaticResource MenuItem}"/>
-                    <TextBlock Text="Estatísticas" Style="{StaticResource MenuItem}"/>
+ 
+                    <TextBlock Text="Pedidos"  Foreground="White" Margin="0,10"  />
+                    <TextBlock Text="Produtos"  Foreground="White" Margin="0,10"  />
+                    <TextBlock Text="Pendências"  Foreground="White" Margin="0,10" />
+                    <TextBlock Text="Estatísticas"  Foreground="White" Margin="0,10" />
 
                    
                     <Border Background="#3D5AFE" CornerRadius="8" Padding="5">
-                        <TextBlock Text="Clientes" Style="{StaticResource MenuItem}" FontWeight="Bold"/>
+                        <TextBlock Text="Clientes" Foreground="White" FontWeight="Bold"/>
                     </Border>
 
                 </StackPanel>
