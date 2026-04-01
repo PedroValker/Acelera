@@ -9,46 +9,34 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- MENU LATERAL -->
-        <StackPanel Background="#1E2AD2" Grid.Column="0" Padding="20">
+        <Border Background="#1E2AD2" Grid.Column="0" Padding="20">
 
-            <!-- TOPO -->
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,30">
-                <TextBlock Text="🧺" FontSize="26" Margin="0,0,10,0"/>
-                <TextBlock Text="Basic" 
-                           Foreground="White" 
-                           FontSize="20"
-                           VerticalAlignment="Center"
-                           FontWeight="SemiBold"/>
-            </StackPanel>
-
-            <!-- USUÁRIO -->
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,40">
-
-                <Ellipse Width="40" Height="40" Margin="0,0,10,0">
-                    <Ellipse.Fill>
-                        <ImageBrush ImageSource="https://i.pravatar.cc/100"/>
-                    </Ellipse.Fill>
-                </Ellipse>
-
-                <TextBlock Text="Olá, Carlos Gil"
-                           Foreground="White"
-                           VerticalAlignment="Center"
-                           FontSize="14"/>
-            </StackPanel>
-
-            <!-- MENU -->
             <StackPanel>
 
-                <TextBlock Text="Pedidos" Foreground="White" FontSize="16" Margin="0,15" Cursor="Hand"/>
-                <TextBlock Text="Cadastrar Produtos" Foreground="White" FontSize="16" Margin="0,15" Cursor="Hand"/>
-                <TextBlock Text="Pendências" Foreground="White" FontSize="16" Margin="0,15" Cursor="Hand"/>
-                <TextBlock Text="Estatísticas" Foreground="White" FontSize="16" Margin="0,15" Cursor="Hand"/>
-                <TextBlock Text="Clientes" Foreground="White" FontSize="16" Margin="0,15" Cursor="Hand"/>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,30">
+                    <TextBlock Text="🧺" FontSize="26" Margin="0,0,10,0"/>
+                    <TextBlock Text="Basic" Foreground="White" FontSize="20"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,40">
+                    <Ellipse Width="40" Height="40" Margin="0,0,10,0">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="https://i.pravatar.cc/100"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+
+                    <TextBlock Text="Olá, Carlos Gil" Foreground="White"/>
+                </StackPanel>
+
+                <TextBlock Text="Pedidos" Foreground="White" Margin="0,15"/>
+                <TextBlock Text="Cadastrar Produtos" Foreground="White" Margin="0,15"/>
+                <TextBlock Text="Pendências" Foreground="White" Margin="0,15"/>
+                <TextBlock Text="Estatísticas" Foreground="White" Margin="0,15"/>
+                <TextBlock Text="Clientes" Foreground="White" Margin="0,15"/>
 
             </StackPanel>
 
-        </StackPanel>
+        </Border>
 
         <!-- CONTEÚDO DIREITA -->
         <Grid Grid.Column="1" Margin="20">
