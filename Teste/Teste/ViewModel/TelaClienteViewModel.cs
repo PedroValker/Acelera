@@ -1,12 +1,12 @@
 ﻿using System.Collections.ObjectModel;
 using TelaClientes;
-using Teste.Models;
+using Teste.Model;
 
 namespace TelaClientes.ViewModels
 {
     public class MainViewModel
     {
-        public ObservableCollection<Cliente> Clientes { get; set; }
+        public ObservableCollection<User> Clientes { get; set; }
 
         public MainViewModel()
         {

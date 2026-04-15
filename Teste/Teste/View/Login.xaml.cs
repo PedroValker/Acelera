@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Input;
+using TelaClientes;
+using Teste.Model;
+using Teste.View;
 using Teste.ViewModel;
-using Teste.Models;
 
 namespace Teste
 {
@@ -22,7 +24,6 @@ namespace Teste
                 SenhaBox.Password = SenhaVisivelBox.Text;
                 SenhaBox.Visibility = Visibility.Visible;
                 SenhaVisivelBox.Visibility = Visibility.Collapsed;
-
                 BotaoSenha.Content = "Ver senha";
             }
             else
@@ -30,7 +31,6 @@ namespace Teste
                 SenhaVisivelBox.Text = SenhaBox.Password;
                 SenhaVisivelBox.Visibility = Visibility.Visible;
                 SenhaBox.Visibility = Visibility.Collapsed;
-
                 BotaoSenha.Content = "Esconder senha";
             }
 
@@ -39,33 +39,62 @@ namespace Teste
 
         private void SenhaBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            SenhaPlaceholder.Visibility = string.IsNullOrEmpty(SenhaBox.Password)
+            SenhaPlaceholder.Visibility =
+                string.IsNullOrEmpty(SenhaBox.Password)
                 ? Visibility.Visible
                 : Visibility.Collapsed;
         }
 
         private void SenhaVisivelBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
-            SenhaPlaceholder.Visibility = string.IsNullOrEmpty(SenhaVisivelBox.Text)
+            SenhaPlaceholder.Visibility =
+                string.IsNullOrEmpty(SenhaVisivelBox.Text)
                 ? Visibility.Visible
                 : Visibility.Collapsed;
         }
 
         private void BotaoEntrar_Click(object sender, RoutedEventArgs e)
         {
-            string email = EmailBox.Text;
+            string email = EmailBox.Text.Trim();
             string senha = senhaVisivel ? SenhaVisivelBox.Text : SenhaBox.Password;
+
+            // 🔥 VALIDAÇÃO BÁSICA (IMPORTANTE)
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(senha))
+            {
+                MessageBox.Show("Preencha email e senha.");
+                return;
+            }
 
             try
             {
                 LoginViewModel vm = new LoginViewModel();
                 User user = vm.FazerLogin(email, senha);
 
+                if (user == null)
+                {
+                    MessageBox.Show("Usuário não encontrado ou senha incorreta.");
+                    return;
+                }
+
                 MessageBox.Show($"Bem-vindo, {user.Nome}!");
+
+                Window tela;
+
+                if (user.IsAdmin)
+                {
+                    tela = new PrincipalAdministrador();
+                }
+                else
+                {
+                    tela = new TelaPrincipalCliente(user.Nome);
+                }
+
+                tela.Show();
+                this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Erro no login: " + ex.Message);
             }
         }
 
@@ -73,7 +102,6 @@ namespace Teste
         {
             MainWindow cadastro = new MainWindow();
             cadastro.Show();
-
             this.Close();
         }
     }

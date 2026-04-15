@@ -7,9 +7,18 @@ namespace Teste
 {
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            // 🔥 CARREGA OS USUÁRIOS AO ABRIR O SISTEMA
+            UserRepository repo = new UserRepository();
+            repo.CarregarDoArquivo();
+        }
+
         protected override void OnExit(ExitEventArgs e)
         {
-            base.OnExit(e);
+            // 🔥 SALVA OS USUÁRIOS AO FECHAR O SISTEMA
 
             string pastaProjeto = Path.GetFullPath(
                 Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\")
@@ -29,11 +38,13 @@ namespace Teste
             foreach (var user in MemoriaUsuarios.Lista)
             {
                 sb.AppendLine(
-                    $"Nome:{user.Nome} | Email:{user.Email} | Telefone:{user.Telefone} | Senha:{user.Senha} | Data:{user.DataCriacao}"
+                    $"Id:{user.Id} | Nome:{user.Nome} | Email:{user.Email} | Telefone:{user.Telefone} | Senha:{user.Senha} | Data:{user.DataCriacao}"
                 );
             }
 
             File.WriteAllText(arquivoCadastro, sb.ToString(), Encoding.UTF8);
+
+            base.OnExit(e);
         }
     }
 }

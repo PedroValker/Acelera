@@ -1,1 +1,2 @@
-﻿
+﻿Id:1 | Nome:teste | Email:teste@gmail.com | Telefone:1321321321 | Senha:123 | Data:15/04/2026 11:26:27
+Id:1 | Nome:teste | Email:teste@gmail.com | Telefone:1321321321 | Senha:123 | Data:15/04/2026 11:26:27

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using Teste.Models;
+using Teste.Model;
 using System.IO;
 using System.Collections.Generic;
 
@@ -11,6 +11,8 @@ namespace Teste.Repository
         // Salva usuário na memória, mas só se passar as validações
         public void CarregarDoArquivo()
         {
+            MemoriaUsuarios.Lista.Clear(); // 🔥 evita duplicação
+
             string pastaProjeto = Path.GetFullPath(
                 Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\")
             );
@@ -26,13 +28,21 @@ namespace Teste.Repository
             {
                 var partes = linha.Split('|');
 
-                MemoriaUsuarios.Lista.Add(new User
+                if (partes.Length < 5)
+                    continue;
+
+                if (!int.TryParse(partes[0].Replace("Id:", "").Trim(), out int id))
+                    continue;
+
+                var user = new User(id)
                 {
-                    Nome = partes[0].Replace("Nome:", "").Trim(),
-                    Email = partes[1].Replace("Email:", "").Trim(),
-                    Telefone = partes[2].Replace("Telefone:", "").Trim(),
-                    Senha = partes[3].Replace("Senha:", "").Trim()
-                });
+                    Nome = partes[1].Replace("Nome:", "").Trim(),
+                    Email = partes[2].Replace("Email:", "").Trim(),
+                    Telefone = partes[3].Replace("Telefone:", "").Trim(),
+                    Senha = partes[4].Replace("Senha:", "").Trim()
+                };
+
+                MemoriaUsuarios.Lista.Add(user);
             }
         }
         public bool Salvar(User user, out string mensagemErro)

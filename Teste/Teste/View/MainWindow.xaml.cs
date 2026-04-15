@@ -2,8 +2,8 @@
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Input;
+using Teste.Model;
 using Teste.Repository;
-using Teste.ViewModel;
 
 namespace Teste
 {
@@ -16,54 +16,77 @@ namespace Teste
 
         private void CriarConta_Click(object sender, RoutedEventArgs e)
         {
-            string nome = NomeBox.Text;
-            string email = EmailBox.Text;
-            string telefone = TelefoneBox.Text;
+            string nome = NomeBox.Text.Trim();
+            string email = EmailBox.Text.Trim();
+            string telefone = TelefoneBox.Text.Trim();
             string senha = SenhaBox.Password;
             string confirmarSenha = ConfirmarSenhaBox.Password;
 
+            // 🔥 VALIDAÇÃO
+            if (string.IsNullOrWhiteSpace(nome) ||
+                string.IsNullOrWhiteSpace(email) ||
+                string.IsNullOrWhiteSpace(telefone) ||
+                string.IsNullOrWhiteSpace(senha) ||
+                string.IsNullOrWhiteSpace(confirmarSenha))
+            {
+                MessageBox.Show("Preencha todos os campos!");
+                return;
+            }
+
             if (!EmailValido(email))
             {
-                MessageBox.Show("Por favor, informe um e-mail válido.");
+                MessageBox.Show("E-mail inválido!");
                 return;
             }
 
             if (!TelefoneValido(telefone))
             {
-                MessageBox.Show("Por favor, informe um número de telefone válido com 10 ou 11 dígitos.");
+                MessageBox.Show("Telefone inválido!");
                 return;
             }
 
-            UserRepository repo = new UserRepository();
-            if (repo.SenhaExiste(senha))
+            if (senha != confirmarSenha)
             {
-                MessageBox.Show("Essa senha já foi usada. Por favor, escolha outra.");
+                MessageBox.Show("As senhas não coincidem!");
                 return;
             }
 
-            try
+            // 🔥 VERIFICA DUPLICIDADE
+            foreach (var u in MemoriaUsuarios.Lista)
             {
-                CadastroViewModel vm = new CadastroViewModel();
-                vm.CriarConta(nome, email, telefone, senha, confirmarSenha);
-
-                MessageBox.Show("Conta criada com sucesso!");
-
-                Login login = new Login();
-                login.Show();
-
-                this.Close();
+                if (u.Email == email)
+                {
+                    MessageBox.Show("Esse e-mail já está cadastrado!");
+                    return;
+                }
             }
-            catch (Exception ex)
+
+            // 🔥 CRIA USUÁRIO (SEM ISADMIN!)
+            User user = new User
             {
-                MessageBox.Show(ex.Message);
-            }
+                Nome = nome,
+                Email = email,
+                Telefone = telefone,
+                Senha = senha,
+                DataCriacao = DateTime.Now
+            };
+
+            // 🔥 SALVA NA MEMÓRIA
+            MemoriaUsuarios.Lista.Add(user);
+
+            MessageBox.Show("Conta criada com sucesso!");
+            MemoriaUsuarios.Lista.Add(user);
+
+            MessageBox.Show("Total de usuários na memória: " + MemoriaUsuarios.Lista.Count);
+            // abre login
+            Login login = new Login();
+            login.Show();
+
+            this.Close();
         }
 
         private bool EmailValido(string email)
         {
-            if (string.IsNullOrWhiteSpace(email))
-                return false;
-
             string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             return Regex.IsMatch(email, pattern);
         }
@@ -78,13 +101,11 @@ namespace Teste
             Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text);
         }
+
         private void Entrar_Click(object sender, RoutedEventArgs e)
         {
-            // Abre a janela de Login
             Login loginWindow = new Login();
             loginWindow.Show();
-
-            // Fecha a janela atual (Cadastro)
             this.Close();
         }
     }

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Teste.Models;
+using Teste.Model;
 
 namespace Teste.Repository
 {

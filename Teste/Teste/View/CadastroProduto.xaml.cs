@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-using Teste.Models;
+using Teste.Model;
 using System.Windows.Controls;
 namespace Teste
 {

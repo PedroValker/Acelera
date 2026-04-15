@@ -8,5 +8,8 @@
     <Compile Update="View\PrincipalAdministrador.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\TelaPrincipalCliente.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

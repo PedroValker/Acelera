@@ -165,3 +165,5 @@ C:\Users\aluno\Downloads\Acelera\Teste\Teste\obj\Debug\net8.0-windows\Teste.cspr
 C:\Users\aluno\Downloads\Acelera\Teste\Teste\obj\Debug\net8.0-windows\Teste.sourcelink.json
 C:\Users\aluno\Downloads\Acelera\Teste\Teste\obj\Debug\net8.0-windows\Teste.genruntimeconfig.cache
 C:\Users\aluno\Downloads\Acelera\Teste\Teste\obj\Debug\net8.0-windows\ref\Teste.dll
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\TelaPrincipalCliente.g.cs
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\TelaPrincipalCliente.baml
