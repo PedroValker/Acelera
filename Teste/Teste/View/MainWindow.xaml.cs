@@ -72,7 +72,6 @@ namespace Teste
             };
 
             // 🔥 SALVA NA MEMÓRIA
-            MemoriaUsuarios.Lista.Add(user);
 
             MessageBox.Show("Conta criada com sucesso!");
             MemoriaUsuarios.Lista.Add(user);

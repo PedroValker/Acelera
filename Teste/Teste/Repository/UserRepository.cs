@@ -13,8 +13,10 @@ namespace Teste.Repository
         {
             MemoriaUsuarios.Lista.Clear(); // 🔥 evita duplicação
 
+            // Mude esta linha no seu UserRepository.cs:
             string pastaProjeto = Path.GetFullPath(
-                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\")
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\") // <-- Coloque 3 vezes o ..\ aqui também!
+    
             );
 
             string caminho = Path.Combine(pastaProjeto, "cadastroUsers", "cadastroUsers.txt");

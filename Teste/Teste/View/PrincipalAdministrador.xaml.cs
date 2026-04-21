@@ -14,19 +14,12 @@ using System.Windows.Shapes;
 
 namespace Teste.View
 {
-    /// <summary>
-    /// Lógica interna para PrincipalAdministrador.xaml
-    /// </summary>
+
     public partial class PrincipalAdministrador : Window
     {
         public PrincipalAdministrador()
         {
             InitializeComponent();
-        }
-
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
         }
     }
 }

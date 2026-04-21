@@ -1,0 +1,2 @@
+﻿Id:1 | Nome:pedro | Email:pedro@gmail.com | Telefone:12991080134 | Senha:123 | Data:21/04/2026 05:18:53
+Id:2 | Nome:pedro | Email:pedro12@gmail.com | Telefone:12991080134 | Senha:123 | Data:21/04/2026 05:19:48

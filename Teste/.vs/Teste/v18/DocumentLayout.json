@@ -1,7 +1,56 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\acelera\\Teste\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\pedro\\onedrive\\documentos\\acelera\\teste\\teste\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\pedro\\onedrive\\documentos\\acelera\\teste\\teste\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\pedro\\onedrive\\documentos\\acelera\\teste\\teste\\view\\telaprincipalcliente.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\view\\telaprincipalcliente.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\pedro\\onedrive\\documentos\\acelera\\teste\\teste\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\pedro\\onedrive\\documentos\\acelera\\teste\\teste\\view\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\view\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\pedro\\onedrive\\documentos\\acelera\\teste\\teste\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\pedro\\onedrive\\documentos\\acelera\\teste\\teste\\repository\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\repository\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\pedro\\onedrive\\documentos\\acelera\\teste\\teste\\repository\\memoriaproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\repository\\memoriaproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\pedro\\onedrive\\documentos\\acelera\\teste\\teste\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\pedro\\onedrive\\documentos\\acelera\\teste\\teste\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\pedro\\onedrive\\documentos\\acelera\\teste\\teste\\view\\principaladministrador.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\view\\principaladministrador.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|c:\\users\\pedro\\onedrive\\documentos\\acelera\\teste\\teste\\view\\principaladministrador.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{288F7E49-41B1-43C0-B63A-4663A9E5C15D}|Teste\\Teste.csproj|solutionrelative:teste\\view\\principaladministrador.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,15 +58,165 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\Model\\User.cs",
+              "RelativeDocumentMoniker": "Teste\\Model\\User.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\Model\\User.cs",
+              "RelativeToolTip": "Teste\\Model\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T07:51:00.695Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\ViewModel\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Teste\\ViewModel\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\ViewModel\\LoginViewModel.cs",
+              "RelativeToolTip": "Teste\\ViewModel\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T08:00:14.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\View\\Login.xaml.cs",
+              "RelativeDocumentMoniker": "Teste\\View\\Login.xaml.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\View\\Login.xaml.cs",
+              "RelativeToolTip": "Teste\\View\\Login.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T07:56:25.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Teste\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\App.xaml.cs*",
+              "RelativeToolTip": "Teste\\App.xaml.cs*",
+              "ViewState": "AgIAABMAAAAAAAAAAAA5wDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T07:55:06.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Teste\\Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "Teste\\Repository\\UserRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T07:53:05.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProdutoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\Repository\\ProdutoRepository.cs",
+              "RelativeDocumentMoniker": "Teste\\Repository\\ProdutoRepository.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\Repository\\ProdutoRepository.cs",
+              "RelativeToolTip": "Teste\\Repository\\ProdutoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T07:53:01.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\View\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Teste\\View\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\View\\MainWindow.xaml",
+              "RelativeToolTip": "Teste\\View\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-21T07:51:14.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PrincipalAdministrador.xaml",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\View\\PrincipalAdministrador.xaml",
+              "RelativeDocumentMoniker": "Teste\\View\\PrincipalAdministrador.xaml",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\View\\PrincipalAdministrador.xaml",
+              "RelativeToolTip": "Teste\\View\\PrincipalAdministrador.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-21T07:44:46.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TelaPrincipalCliente.xaml",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\View\\TelaPrincipalCliente.xaml",
+              "RelativeDocumentMoniker": "Teste\\View\\TelaPrincipalCliente.xaml",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\View\\TelaPrincipalCliente.xaml",
+              "RelativeToolTip": "Teste\\View\\TelaPrincipalCliente.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-21T07:41:05.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PrincipalAdministrador.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\View\\PrincipalAdministrador.xaml.cs",
+              "RelativeDocumentMoniker": "Teste\\View\\PrincipalAdministrador.xaml.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\View\\PrincipalAdministrador.xaml.cs",
+              "RelativeToolTip": "Teste\\View\\PrincipalAdministrador.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T07:37:07.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\View\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Teste\\View\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\View\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Teste\\View\\MainWindow.xaml.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAwG4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T07:37:02.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MemoriaProduto.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\Repository\\MemoriaProduto.cs",
+              "RelativeDocumentMoniker": "Teste\\Repository\\MemoriaProduto.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Documentos\\Acelera\\Teste\\Teste\\Repository\\MemoriaProduto.cs",
+              "RelativeToolTip": "Teste\\Repository\\MemoriaProduto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T07:36:12.262Z",
+              "EditorCaption": ""
             }
           ]
         }
