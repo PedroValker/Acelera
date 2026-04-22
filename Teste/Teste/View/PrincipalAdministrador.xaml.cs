@@ -21,5 +21,32 @@ namespace Teste.View
         {
             InitializeComponent();
         }
+        
+
+    private void Pedidos_Click(object sender, RoutedEventArgs e)
+        {
+            ConteudoPrincipal.Content = new ();
+        }
+
+        private void Cadastrar_Click(object sender, RoutedEventArgs e)
+        {
+            ConteudoPrincipal.Content = new CadastroProduto();
+        }
+
+        private void Pendencias_Click(object sender, RoutedEventArgs e)
+        {
+            ConteudoPrincipal.Content = new CadastroProduto();
+        }
+
+        private void Estatisticas_Click(object sender, RoutedEventArgs e)
+        {
+            ConteudoPrincipal.Content = new CadastroProduto();
+        }
+
+        private void Clientes_Click(object sender, RoutedEventArgs e)
+        {
+            ConteudoPrincipal.Content = new CadastroProduto();
+        }
+     
     }
 }

@@ -1,18 +1,18 @@
 ﻿using System.Windows;
 using Teste.Model;
 using System.Windows.Controls;
-namespace Teste
+
+namespace Teste.View   // 🔥 AQUI ESTÁ A CORREÇÃO
 {
-    public partial class CadastroProdutos : Window
+    public partial class CadastroProduto : UserControl
     {
-        public CadastroProdutos()
+        public CadastroProduto()
         {
             InitializeComponent();
         }
 
         private void SalvarProduto_Click(object sender, RoutedEventArgs e)
         {
-            // Validação simples
             if (string.IsNullOrWhiteSpace(NomeProdutoBox.Text) ||
                 string.IsNullOrWhiteSpace(MarcaBox.Text) ||
                 CategoriaBox.SelectedItem == null ||
@@ -22,24 +22,20 @@ namespace Teste
                 return;
             }
 
-            // Criando objeto
             Produto produto = new Produto
             {
                 Nome = NomeProdutoBox.Text,
                 Marca = MarcaBox.Text,
                 Categoria = (CategoriaBox.SelectedItem as ComboBoxItem)?.Content.ToString(),
                 Preco = decimal.Parse(PrecoBox.Text),
-            
             };
 
             MessageBox.Show("Produto cadastrado com sucesso!");
 
-            // Limpar campos
             NomeProdutoBox.Clear();
             MarcaBox.Clear();
             CategoriaBox.SelectedIndex = -1;
             PrecoBox.Clear();
         }
     }
-
 }
