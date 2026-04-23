@@ -1,23 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-
-namespace Teste.Models
+namespace Teste.Model
 {
     public class User
     {
+        private static int contador = 1;
+
+        public int Id { get; set; }
+
         public string Nome { get; set; } = "";
         public string Email { get; set; } = "";
         public string Telefone { get; set; } = "";
         public string Senha { get; set; } = "";
-        public DateTime DataCriacao { get; set; } = DateTime.Now; // inicializa com data atual
-    }
+        public DateTime DataCriacao { get; set; } = DateTime.Now;
 
-    public class Cliente
-    {
-        public string Nome { get; set; } = "";
-        public string Email { get; set; } = "";
-        // Se quiser hierarquia, descomente a linha abaixo
-        // public List<Cliente> Clientes { get; set; } = new List<Cliente>();
-    }
+        // ✔ Construtor padrão (novo usuário)
+        public User()
+        {
+            Id = contador++;
+        }
 
+        // 🔥 NOVO CONSTRUTOR (para carregar do arquivo)
+        public User(int id)
+        {
+            Id = id;
+
+            // mantém o contador correto
+            if (id >= contador)
+                contador = id + 1;
+        }
+
+        public bool IsAdmin => Id == 1;
+    }
 }

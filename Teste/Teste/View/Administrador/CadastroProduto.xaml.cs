@@ -1,18 +1,21 @@
 ﻿using System.Windows;
-using Teste.Models;
 using System.Windows.Controls;
-namespace Teste
+using Teste.Model;
+using Teste.Repository;
+
+namespace Teste.View   // 🔥 AQUI ESTÁ A CORREÇÃO
 {
-    public partial class CadastroProdutos : Window
+    public partial class CadastroProduto : UserControl
     {
-        public CadastroProdutos()
+        public CadastroProduto()
         {
             InitializeComponent();
+
+            ListaProdutos.ItemsSource = MemoriaProdutos.Lista;
         }
 
         private void SalvarProduto_Click(object sender, RoutedEventArgs e)
         {
-            // Validação simples
             if (string.IsNullOrWhiteSpace(NomeProdutoBox.Text) ||
                 string.IsNullOrWhiteSpace(MarcaBox.Text) ||
                 CategoriaBox.SelectedItem == null ||
@@ -22,24 +25,32 @@ namespace Teste
                 return;
             }
 
-            // Criando objeto
             Produto produto = new Produto
             {
                 Nome = NomeProdutoBox.Text,
                 Marca = MarcaBox.Text,
                 Categoria = (CategoriaBox.SelectedItem as ComboBoxItem)?.Content.ToString(),
                 Preco = decimal.Parse(PrecoBox.Text),
-            
+                Peso = PesoBox.Text
             };
+
+            ProdutoRepository repo = new ProdutoRepository();
+
+            if (!repo.Salvar(produto, out string erro))
+            {
+                MessageBox.Show(erro);
+                return;
+            }
+
+            // 🔥 Atualiza a lista (refresca visual)
+            ListaProdutos.ItemsSource = null;
+            ListaProdutos.ItemsSource = MemoriaProdutos.Lista;
 
             MessageBox.Show("Produto cadastrado com sucesso!");
 
-            // Limpar campos
             NomeProdutoBox.Clear();
             MarcaBox.Clear();
             CategoriaBox.SelectedIndex = -1;
-            PrecoBox.Clear();
         }
     }
-
 }

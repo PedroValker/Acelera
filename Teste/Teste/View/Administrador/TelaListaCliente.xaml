@@ -16,7 +16,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Background="#1E3AFF" Grid.Column="0">
+        <Grid Background="#1E22D8" Grid.Column="0">
             <StackPanel Margin="20">
 
                 <TextBlock Text="🛒 Basic"

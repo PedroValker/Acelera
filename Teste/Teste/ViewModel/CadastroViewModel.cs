@@ -1,5 +1,5 @@
 ﻿using System;
-using Teste.Models;
+using Teste.Model;
 using Teste.Repository;
 
 namespace Teste.ViewModel

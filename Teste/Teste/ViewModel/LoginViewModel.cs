@@ -1,5 +1,5 @@
 ﻿using System;
-using Teste.Models;
+using Teste.Model;
 using Teste.Repository;
 
 namespace Teste.ViewModel
@@ -8,14 +8,12 @@ namespace Teste.ViewModel
     {
         public User FazerLogin(string email, string senha)
         {
-            // Instancia o repositório
             UserRepository repo = new UserRepository();
 
-            // Garante que a memória está carregada
-            // Só chama uma vez no início do programa (pode colocar no App.xaml.cs também)
-            repo.CarregarDoArquivo();
+            // ❌ APAGUE OU COMENTE A LINHA ABAIXO:
+            // repo.CarregarDoArquivo(); 
 
-            // Busca na memória
+            // Busca direto na memória (onde o novo usuário acabou de ser cadastrado)
             User user = repo.BuscarPorEmail(email);
 
             if (user == null)
