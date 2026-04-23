@@ -7,29 +7,27 @@ namespace Teste.Repository
 {
     public class ProdutoRepository
     {
-        // Retorna o caminho completo do arquivo de produtos
         private string ObterCaminho()
         {
             string pastaProjeto = Path.GetFullPath(
-                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\")
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\")
             );
 
-            // Pasta e arquivo
             return Path.Combine(pastaProjeto, "cadastroProdutos", "produtos.txt");
         }
 
-        // Carrega produtos do arquivo para memória
+        // 🔥 CARREGAR DO ARQUIVO
         public void CarregarDoArquivo()
         {
             string caminho = ObterCaminho();
 
-            // Cria pasta se não existir
             string pasta = Path.GetDirectoryName(caminho)!;
             Directory.CreateDirectory(pasta);
 
-            // Se o arquivo não existe, nada a fazer
             if (!File.Exists(caminho))
                 return;
+
+            MemoriaProdutos.Lista.Clear();
 
             var linhas = File.ReadAllLines(caminho);
 
@@ -37,29 +35,32 @@ namespace Teste.Repository
             {
                 var partes = linha.Split('|');
 
-                // Ignora linhas inválidas
-                if (partes.Length < 4)
+                if (partes.Length < 5)
                     continue;
 
-                // Converte preço com segurança
-                decimal preco = decimal.TryParse(partes[3].Replace("Preco:", "").Trim(), out var p) ? p : 0m;
+                decimal preco = decimal.TryParse(
+                    partes[3].Replace("Preco:", "").Trim(),
+                    out var p) ? p : 0m;
+
+                // 🔥 PESO COMO STRING
+                string peso = partes[4].Replace("Peso:", "").Trim();
 
                 MemoriaProdutos.Lista.Add(new Produto
                 {
                     Nome = partes[0].Replace("Nome:", "").Trim(),
                     Marca = partes[1].Replace("Marca:", "").Trim(),
                     Categoria = partes[2].Replace("Categoria:", "").Trim(),
-                    Preco = preco
+                    Preco = preco,
+                    Peso = peso
                 });
             }
-        }
+        } // 🔥 FECHAMENTO QUE FALTAVA
 
-        // Salva produto na memória e no arquivo
+        // 🔥 SALVAR NA MEMÓRIA
         public bool Salvar(Produto produto, out string erro)
         {
             erro = "";
 
-            // Validações básicas
             if (string.IsNullOrWhiteSpace(produto.Nome) ||
                 string.IsNullOrWhiteSpace(produto.Marca) ||
                 string.IsNullOrWhiteSpace(produto.Categoria))
@@ -68,35 +69,30 @@ namespace Teste.Repository
                 return false;
             }
 
-            // Evita duplicidade pelo nome
-            if (MemoriaProdutos.Lista.Any(p => p.Nome == produto.Nome))
+            if (MemoriaProdutos.Lista.Any(p =>
+                p.Nome.Trim().ToLower() == produto.Nome.Trim().ToLower()))
             {
                 erro = "Produto já cadastrado.";
                 return false;
             }
 
-            // Adiciona na memória
             MemoriaProdutos.Lista.Add(produto);
-
-            // Salva no arquivo
-            SalvarNoArquivo(produto);
 
             return true;
         }
 
-        // Salva um produto no arquivo
-        private void SalvarNoArquivo(Produto produto)
+        // 🔥 SALVAR TUDO NO FINAL
+        public void SalvarTudo()
         {
             string caminho = ObterCaminho();
 
-            // Cria pasta caso não exista
             string pasta = Path.GetDirectoryName(caminho)!;
             Directory.CreateDirectory(pasta);
 
-            // Linha formatada
-            string linha = $"Nome:{produto.Nome} | Marca:{produto.Marca} | Categoria:{produto.Categoria} | Preco:{produto.Preco}";
+            var linhas = MemoriaProdutos.Lista.Select(p =>
+                $"Nome:{p.Nome} | Marca:{p.Marca} | Categoria:{p.Categoria} | Preco:{p.Preco} | Peso:{p.Peso}");
 
-            File.AppendAllText(caminho, linha + Environment.NewLine);
+            File.WriteAllLines(caminho, linhas);
         }
     }
 }

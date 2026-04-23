@@ -1,0 +1,1 @@
+﻿Nome:Coca-Cola | Marca:Coca | Categoria:Bebidas | Preco:10,50 | Peso:2L

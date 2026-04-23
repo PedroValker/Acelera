@@ -110,10 +110,8 @@ C:\Users\aluno\Documents\Acelera\Teste\Teste\bin\Debug\net8.0-windows\Teste.deps
 C:\Users\aluno\Documents\Acelera\Teste\Teste\bin\Debug\net8.0-windows\Teste.runtimeconfig.json
 C:\Users\aluno\Documents\Acelera\Teste\Teste\bin\Debug\net8.0-windows\Teste.dll
 C:\Users\aluno\Documents\Acelera\Teste\Teste\bin\Debug\net8.0-windows\Teste.pdb
-C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\CadastroProduto.baml
 C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Login.baml
 C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\MainWindow.baml
-C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\CadastroProduto.g.cs
 C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Login.g.cs
 C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\MainWindow.g.cs
 C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\App.g.cs
@@ -131,10 +129,6 @@ C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\refint\Tes
 C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\Teste.pdb
 C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\Teste.genruntimeconfig.cache
 C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\ref\Teste.dll
-C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\TelaListaCliente.g.cs
-C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\TelaListaCliente.baml
-C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\PrincipalAdministrador.baml
-C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\PrincipalAdministrador.g.cs
 C:\Users\aluno\Downloads\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\CadastroProduto.baml
 C:\Users\aluno\Downloads\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Login.baml
 C:\Users\aluno\Downloads\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\MainWindow.baml
@@ -177,3 +171,9 @@ C:\Users\pedro\OneDrive\Documentos\Acelera\Teste\Teste\obj\Debug\net8.0-windows\
 C:\Users\pedro\OneDrive\Documentos\Acelera\Teste\Teste\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\pedro\OneDrive\Documentos\Acelera\Teste\Teste\obj\Debug\net8.0-windows\Teste_MarkupCompile.lref
 C:\Users\pedro\OneDrive\Documentos\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\TelaListaCliente.baml
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Administrador\CadastroProduto.baml
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Administrador\PrincipalAdministrador.baml
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Administrador\CadastroProduto.g.cs
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Administrador\PrincipalAdministrador.g.cs
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Administrador\TelaListaCliente.g.cs
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Administrador\TelaListaCliente.baml
