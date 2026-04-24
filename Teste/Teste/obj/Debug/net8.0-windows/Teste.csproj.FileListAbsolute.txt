@@ -186,3 +186,5 @@ C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Admin
 C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Administrador\TelaListaCliente.g.cs
 C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Administrador\TelaListaCliente.baml
 >>>>>>> a78c8a89a1869ddb16959203375f84352f04169a
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\FinalizarPedido.baml
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\FinalizarPedido.g.cs
