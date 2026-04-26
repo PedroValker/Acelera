@@ -2,6 +2,15 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="View\Administrador\CadastroCesta.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Administrador\DetalhesCesta.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Administrador\HomeAdministrador.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\Login.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

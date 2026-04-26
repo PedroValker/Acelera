@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Teste.Model;
@@ -14,6 +15,32 @@ namespace Teste.Repository
             );
 
             return Path.Combine(pastaProjeto, "cadastroProdutos", "produtos.txt");
+        }
+
+        // 🔥 Atualizar Produto no arquivo txt (Agora salvando com as Tags certinhas!)
+        public void AtualizarArquivoTxt()
+        {
+            try
+            {
+                // Usando o método ObterCaminho para não repetir código
+                string caminho = ObterCaminho();
+                Directory.CreateDirectory(Path.GetDirectoryName(caminho));
+
+                List<string> linhasParaSalvar = new List<string>();
+
+                foreach (var produto in MemoriaProdutos.Lista)
+                {
+                    // 🔥 FORMATO CORRIGIDO: Agora tem Nome:, Marca:, etc.
+                    string linha = $"Nome:{produto.Nome} | Marca:{produto.Marca} | Categoria:{produto.Categoria} | Preco:{produto.Preco} | Peso:{produto.Peso}";
+                    linhasParaSalvar.Add(linha);
+                }
+
+                File.WriteAllLines(caminho, linhasParaSalvar);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao atualizar arquivo TXT: " + ex.Message);
+            }
         }
 
         // 🔥 CARREGAR DO ARQUIVO
@@ -42,7 +69,6 @@ namespace Teste.Repository
                     partes[3].Replace("Preco:", "").Trim(),
                     out var p) ? p : 0m;
 
-                // 🔥 PESO COMO STRING
                 string peso = partes[4].Replace("Peso:", "").Trim();
 
                 MemoriaProdutos.Lista.Add(new Produto
@@ -54,7 +80,7 @@ namespace Teste.Repository
                     Peso = peso
                 });
             }
-        } // 🔥 FECHAMENTO QUE FALTAVA
+        }
 
         // 🔥 SALVAR NA MEMÓRIA
         public bool Salvar(Produto produto, out string erro)
@@ -78,21 +104,23 @@ namespace Teste.Repository
 
             MemoriaProdutos.Lista.Add(produto);
 
+            // 🔥 DICA: Para garantir, já adicionamos no TXT na hora que cadastra também!
+            try
+            {
+                string caminho = ObterCaminho();
+                Directory.CreateDirectory(Path.GetDirectoryName(caminho));
+                string linha = $"Nome:{produto.Nome} | Marca:{produto.Marca} | Categoria:{produto.Categoria} | Preco:{produto.Preco} | Peso:{produto.Peso}\n";
+                File.AppendAllText(caminho, linha);
+            }
+            catch { }
+
             return true;
         }
 
-        // 🔥 SALVAR TUDO NO FINAL
+        // 🔥 SALVAR TUDO NO FINAL (Apenas redireciona para o AtualizarArquivoTxt)
         public void SalvarTudo()
         {
-            string caminho = ObterCaminho();
-
-            string pasta = Path.GetDirectoryName(caminho)!;
-            Directory.CreateDirectory(pasta);
-
-            var linhas = MemoriaProdutos.Lista.Select(p =>
-                $"Nome:{p.Nome} | Marca:{p.Marca} | Categoria:{p.Categoria} | Preco:{p.Preco} | Peso:{p.Peso}");
-
-            File.WriteAllLines(caminho, linhas);
+            AtualizarArquivoTxt();
         }
     }
 }

@@ -1,1 +1,3 @@
-﻿Nome:Coca-Cola | Marca:Coca | Categoria:Bebidas | Preco:10,50 | Peso:2L
+Coca-Cola|Coca|Alimentos|8,30|2L
+Pão|N/A|Alimentos|0,50|50g
+Arroz|Dona Benta|Alimentos|15,00|500g

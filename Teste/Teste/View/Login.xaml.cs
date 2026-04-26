@@ -82,7 +82,7 @@ namespace Teste
 
                 if (user.IsAdmin)
                 {
-                    tela = new PrincipalAdministrador();
+                    tela = new PrincipalAdministrador(user.Nome); ;
                 }
                 else
                 {
