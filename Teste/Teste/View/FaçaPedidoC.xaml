@@ -4,9 +4,9 @@
              xmlns:av="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="av"
-             Background="#F7F7F7" Width="790" Height="423">
+             Background="#F7F7F7">
 
-	<!-- 🎨 RESOURCES -->
+    <!-- 🎨 RESOURCES -->
 	<UserControl.Resources>
 
 		<!-- Cores -->
@@ -40,11 +40,11 @@
 		<!-- Botão principal -->
 		<Style x:Key="PrimaryButtonStyle" TargetType="Button">
 			<Setter Property="Height" Value="45"/>
+            <Setter Property="Padding" Value="12,6"/>
 			<Setter Property="Background" Value="{StaticResource PrimaryColor}"/>
 			<Setter Property="FontWeight" Value="Bold"/>
-			<Setter Property="BorderThickness" Value="0"/>
-			<Setter Property="Margin" Value="0,10,0,0"/>
-		</Style>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
 
 		<!-- Navbar botão -->
 		<Style x:Key="NavButtonStyle" TargetType="Button">
@@ -78,73 +78,82 @@
 	<!-- 🧱 LAYOUT PRINCIPAL -->
 	<Grid>
 		<Grid.RowDefinitions>
-			<RowDefinition Height="70"/>
+			<RowDefinition Height="Auto"/>
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 
 		<!-- 🔝 NAVBAR -->
-		<Grid Grid.Row="0" Background="White">
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="Auto"/>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="Auto"/>
-			</Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Background="White">
 
-			<!-- Logo -->
-			<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0">
-				<TextBlock Text="🧺" FontSize="22" Margin="0,0,8,0"/>
-				<TextBlock Text="Basic" FontSize="18" FontWeight="Bold"/>
-			</StackPanel>
+            <!-- LINHAS DA NAVBAR -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-			<!-- Menu -->
-			<StackPanel Grid.Column="1"
-                        Orientation="Horizontal"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center">
+            <!-- COLUNAS -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
 
-				<Button Content="Faça seu Pedido" Style="{StaticResource NavButtonStyle}"/>
-				<Button Content="Assinatura" Style="{StaticResource NavButtonStyle}"/>
-				<Button Content="Pedidos" Style="{StaticResource NavButtonStyle}"/>
-				<Button Content="Sobre" Style="{StaticResource NavButtonStyle}"/>
-				<Button Content="Contato" Style="{StaticResource NavButtonStyle}"/>
+            <!-- LOGO -->
+            <StackPanel Orientation="Horizontal"
+                VerticalAlignment="Center"
+                Margin="20,0">
 
-			</StackPanel>
+                <TextBlock Text="🛒"
+                   FontSize="22"
+                   Margin="0,0,5,0"
+                   Foreground="#1E22D8"/>
 
-			<!-- Ações -->
-			<StackPanel Grid.Column="2"
-                        Orientation="Horizontal"
-                        VerticalAlignment="Center"
-                        Margin="0,0,20,0">
+                <TextBlock Text="Basic"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   Foreground="#1E22D8"/>
+            </StackPanel>
 
-				<!-- Perfil -->
-				<Button Style="{StaticResource IconButtonStyle}" Margin="0,0,10,0">
-					<TextBlock Text="👤"/>
-				</Button>
+            <!-- Olá usuário -->
+            <TextBlock x:Name="NomeUsuarioText"
+               Text="Olá, Usuário"
+               FontSize="18"
+               FontWeight="SemiBold"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"/>
 
-				<!-- Carrinho -->
-				<Button Style="{StaticResource IconButtonStyle}">
-					<Grid>
-						<TextBlock Text="🛒"/>
+            <!-- Ícones -->
+            <StackPanel Orientation="Horizontal"
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                Margin="0,0,20,0">
 
-						<Border Background="Red"
-                                Width="16" Height="16"
-                                CornerRadius="8"
-                                HorizontalAlignment="Right"
-                                VerticalAlignment="Top">
-							<TextBlock Text="2"
-                                       Foreground="White"
-                                       FontSize="10"
-                                       HorizontalAlignment="Center"
-                                       VerticalAlignment="Center"/>
-						</Border>
-					</Grid>
-				</Button>
+                <Button Width="35" Height="35" Margin="5">
+                    <TextBlock Text="👤" FontSize="16" HorizontalAlignment="Center"/>
+                </Button>
 
-			</StackPanel>
-		</Grid>
+                <Button Width="35" Height="35" Margin="5">
+                    <TextBlock Text="🛒" FontSize="16" HorizontalAlignment="Center"/>
+                </Button>
+            </StackPanel>
 
-		<!-- 📦 CONTEÚDO -->
-		<Grid Grid.Row="1" Margin="20">
+            <!-- MENU -->
+            <StackPanel Grid.Row="1"
+                Grid.ColumnSpan="2"
+                Orientation="Horizontal"
+                HorizontalAlignment="Center"
+                Margin="0,5,0,5">
+
+                <Button Content="Faça seu Pedido" Style="{StaticResource PrimaryButtonStyle}" Margin="10" Width="223"/>
+                <Button Content="Assinatura" Style="{StaticResource NavButtonStyle}" Margin="10" Width="158"/>
+                <Button Content="Pedidos" Style="{StaticResource NavButtonStyle}" Margin="10" Width="133"/>
+                <Button Content="Sobre" Style="{StaticResource NavButtonStyle}" Margin="10" Width="110"/>
+                <Button Content="Contato" Style="{StaticResource NavButtonStyle}" Margin="10" Width="134"/>
+            </StackPanel>
+
+        </Grid>
+
+        <!-- 📦 CONTEÚDO -->
+		<Grid Grid.Row="1" Margin="30">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="2*" />
 				<ColumnDefinition Width="3*" />
