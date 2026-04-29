@@ -80,3 +80,11 @@ C:\Users\pedro\OneDrive\Documentos\Acelera\Teste\Teste\obj\Debug\net8.0-windows\
 C:\Users\pedro\OneDrive\Documentos\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Administrador\CadastroCesta.g.cs
 C:\Users\pedro\OneDrive\Documentos\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Administrador\DetalhesCesta.baml
 C:\Users\pedro\OneDrive\Documentos\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Administrador\DetalhesCesta.g.cs
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\AcompanharPedido.baml
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Administrador\CadastroCesta.baml
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Administrador\DetalhesCesta.baml
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Administrador\HomeAdministrador.baml
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\AcompanharPedido.g.cs
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Administrador\CadastroCesta.g.cs
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Administrador\DetalhesCesta.g.cs
+C:\Users\aluno\Documents\Acelera\Teste\Teste\obj\Debug\net8.0-windows\View\Administrador\HomeAdministrador.g.cs
