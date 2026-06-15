@@ -18,10 +18,8 @@ namespace Teste.ViewModel
         public ObservableCollection<Pedido> ListaPedidosEntregues { get; set; } = new ObservableCollection<Pedido>();
         public ObservableCollection<Pedido> ListaPedidosPendentes { get; set; } = new ObservableCollection<Pedido>();
 
-        // 🚀 NOVO: Lista para o cliente acompanhar o que já está na rua
         public ObservableCollection<Pedido> ListaPedidosACaminho { get; set; } = new ObservableCollection<Pedido>();
 
-        // 🛠️ CORREÇÃO: Declarado como anulável (?) para evitar aviso no construtor
         private Pedido? _pedidoSelecionado;
         public Pedido? PedidoSelecionado
         {
@@ -41,7 +39,6 @@ namespace Teste.ViewModel
             _repository = new PedidoRepository();
             Pedidos = new ObservableCollection<Pedido>();
 
-            // 🛠️ CORREÇÃO: Cast preventivo para evitar quebras se o comando receber algo inesperado
             VerMaisCommand = new RelayCommand<Pedido>(pedido => { if (pedido != null) PedidoSelecionado = pedido; });
 
             CarregarPedidosDoCliente();
@@ -49,9 +46,7 @@ namespace Teste.ViewModel
 
         private void CarregarPedidosDoCliente()
         {
-            // APAGADO: _repository.CarregarDoArquivo(); (Isso agora é feito uma vez no App.xaml.cs)
 
-            // Puxa direto da memória atualizada em tempo de execução
             var pedidosFiltrados = MemoriaPedidos.Lista
                 .Where(p => p.IdUsuario == _idUsuarioLogado)
                 .ToList();
@@ -85,14 +80,12 @@ namespace Teste.ViewModel
             }
         }
 
-        // 🛠️ CORREÇÃO: Evento alterado para aceitar nulo (bater com a assinatura do .NET Core)
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? name = null)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     }
 
 
-    // 🛠️ CORREÇÃO: Implementação limpa do RelayCommand sem warnings de Nullable
     public class RelayCommand<T> : ICommand
     {
         private readonly Action<T> _execute;

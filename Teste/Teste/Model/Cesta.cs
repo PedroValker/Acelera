@@ -28,9 +28,7 @@ namespace Teste.Model
             }
         }
        
-        /// <summary>
-        /// Gera o resumo dos itens agrupados de forma profissional
-        /// </summary>
+       
         public string ResumoItens
         {
             get

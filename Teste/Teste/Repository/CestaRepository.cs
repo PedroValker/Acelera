@@ -30,10 +30,9 @@ namespace Teste.Repository
 
             try
             {
-                // Se a cesta já tiver uma imagem salva de forma relativa, preserva
+
                 string imagemFinal = string.IsNullOrEmpty(cesta.ImagemPath) ? "null" : cesta.ImagemPath;
 
-                // 🟢 Se for uma imagem vinda de fora da aplicação (caminho absoluto do computador)
                 if (!string.IsNullOrEmpty(cesta.ImagemPath) && File.Exists(cesta.ImagemPath) && Path.IsPathRooted(cesta.ImagemPath))
                 {
                     string pastaImagens = ObterPastaImagens();
@@ -43,17 +42,13 @@ namespace Teste.Repository
                     string nomeArquivo = $"{Guid.NewGuid()}{extensao}";
                     string destinoCompletoFisico = Path.Combine(pastaImagens, nomeArquivo);
 
-                    // Faz a cópia física segura para a pasta Dados/imagem do projeto
                     File.Copy(cesta.ImagemPath, destinoCompletoFisico, true);
 
-                    // 🌟 FORÇANDO TEXTO PURO SEM SEPARADORES DE MÁQUINA LOCAL:
-                    // Isso impede que o C# gere caminhos como "C:\Users\pedro" no arquivo de texto
                     imagemFinal = "Dados/imagem/" + nomeArquivo;
                 }
 
                 cesta.ImagemPath = imagemFinal;
 
-                // Adiciona apenas se for uma nova ID na memória
                 if (!MemoriaCestas.Lista.Any(c => c.Id == cesta.Id))
                 {
                     MemoriaCestas.Lista.Add(cesta);
@@ -73,7 +68,6 @@ namespace Teste.Repository
             SalvarTudo();
         }
 
-        // 💾 SALVAMENTO DEFINITIVO EM ARQUIVO TEXTO
         public void SalvarTudo()
         {
             try
@@ -95,7 +89,6 @@ namespace Teste.Repository
 
                     string nomesProdutos = string.Join(",", stringsProdutos);
 
-                    // Garante que se o caminho estiver vazio ou nulo por falha de digitação vire string "null"
                     string imagem = string.IsNullOrWhiteSpace(cesta.ImagemPath) ? "null" : cesta.ImagemPath.Replace("\\", "/");
 
                     string linha = $"ID:{cesta.Id} |Nome:{cesta.Nome} |Preco:{cesta.Preco.ToString("F2")} |Imagem:{imagem} |Produtos:{nomesProdutos}";
@@ -136,7 +129,6 @@ namespace Teste.Repository
 
                 decimal.TryParse(precoLimpo, out decimal precoConvertido);
 
-                // Normaliza o caminho do arquivo para o separador nativo do sistema operacional atual
                 string caminhoNormalizado = imagemLimpa == "null" ? "" : imagemLimpa.Replace("/", Path.DirectorySeparatorChar.ToString());
 
                 Cesta c = new Cesta(id)

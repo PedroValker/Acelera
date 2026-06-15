@@ -7,7 +7,7 @@ namespace Teste.Model
     {
         public static List<ItemCarrinho> Itens { get; set; } = new List<ItemCarrinho>();
     }
-    // Representa um item adicionado ao carrinho
+    
     public class ItemCarrinho
     {
         public Cesta CestaSelecionada { get; set; }

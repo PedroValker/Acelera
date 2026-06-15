@@ -11,15 +11,13 @@ namespace Teste.Repository
     {
         private string ObterCaminhoArquivo()
         {
-            // Busca a pasta "Dados" na raiz do projeto
+
             string pastaProjeto = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\"));
 
-            // Definição padrão caso não haja usuário logado
             string sufixoArquivo = "Visitante";
 
             if (Sessao.UsuarioLogado != null)
             {
-                // Vincula o ID do usuário ao nome do arquivo do carrinho individual
                 sufixoArquivo = Sessao.UsuarioLogado.Id.ToString();
             }
 
@@ -27,7 +25,6 @@ namespace Teste.Repository
             return Path.Combine(pastaProjeto, "Dados", nomeArquivo);
         }
 
-        // 🔥 SALVA O RASCUNHO DO CARRINHO NO TXT INDIVIDUAL DO USUÁRIO
         public void AtualizarArquivoTxt()
         {
             try
@@ -39,11 +36,9 @@ namespace Teste.Repository
 
                 foreach (var item in MemoriaCarrinho.Itens)
                 {
-                    // Proteções sanitárias para evitar quebras no delimitador '|'
                     string obsSalvar = string.IsNullOrWhiteSpace(item.Observacoes) ? "NENHUMA" : item.Observacoes.Trim().Replace("|", "");
                     string endSalvar = string.IsNullOrWhiteSpace(item.EnderecoEntrega) ? "A combinar" : item.EnderecoEntrega.Trim().Replace("|", "");
 
-                    // Salva os dados estruturados do carrinho temporário
                     string linha = $"CestaID:{item.CestaSelecionada.Id} |Qtd:{item.Quantidade} |Obs:{obsSalvar} |End:{endSalvar}";
                     linhasParaSalvar.Add(linha);
                 }
@@ -56,7 +51,6 @@ namespace Teste.Repository
             }
         }
 
-        // 🔥 CARREGA O RASCUNHO DO CARRINHO DO USUÁRIO PARA A MEMÓRIA
         public void CarregarDoArquivo()
         {
             try
@@ -79,7 +73,6 @@ namespace Teste.Repository
                     string qtdLimpa = partes[1].Replace("Qtd:", "").Trim();
                     string obsLimpa = partes[2].Replace("Obs:", "").Trim();
 
-                    // Recupera o endereço se ele existir (compatibilidade com arquivos antigos)
                     string endLimpo = "A combinar";
                     if (partes.Length >= 4)
                     {

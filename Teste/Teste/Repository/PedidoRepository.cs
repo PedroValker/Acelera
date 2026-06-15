@@ -58,10 +58,8 @@ namespace Teste.Repository
 
             string obsSalvar = string.IsNullOrWhiteSpace(p.Observacoes) ? "NENHUMA" : p.Observacoes.Trim().Replace("|", "").Replace("\r\n", " ").Replace("\n", " ");
 
-            // Se o Status da montagem estiver vazio nos bastidores, salva como "PENDENTE" para não quebrar a coluna do TXT
             string montagemSalvar = string.IsNullOrWhiteSpace(p.StatusMontagem) ? "PENDENTE" : p.StatusMontagem.Trim();
 
-            // 🔥 ATUALIZADO: Adicionado a propriedade "|Montagem:{montagemSalvar}" na composição final da string de persistência
             return $"IdPedido:{p.IdPedido} |Data:{p.DataDoPedido} |IdUsuario:{p.IdUsuario} |NomePedido:{p.NomePedido} |Recebedor:{p.Recebedor} |Endereco:{p.Endereco} |Pagamento:{p.FormaPagamento} |Status:{p.Status} |Total:{totalFormatado} |Obs:{obsSalvar} |Itens:{stringDosItens} |DataEntrega:{dataEntregaStr} |Composicao:{p.TipoComposicao} |Pago:{p.Pago} |Montagem:{montagemSalvar}";
         }
 

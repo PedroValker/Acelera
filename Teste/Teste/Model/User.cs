@@ -1,6 +1,4 @@
 ﻿using System;
-// Se a sua classe de endereço estiver em outra pasta (ex: Teste.Models), 
-// adicione o using dela aqui em cima, ex: using Teste.SuaPasta;
 
 namespace Teste.Model
 {
@@ -16,17 +14,13 @@ namespace Teste.Model
         public string FotoPerfil { get; set; } = "";
         public DateTime DataCriacao { get; set; } = DateTime.Now;
 
-        // 🚀 CORREÇÃO: Ajustado para "Endereco" (ou o nome exato que você deu para a classe)
-        // O "?" permite que o campo comece nulo no cadastro.
         public Endereco? Endereco { get; set; }
 
-        // Construtor padrão (novo usuário)
         public User()
         {
             Id = contador++;
         }
 
-        // Construtor para carregar do arquivo
         public User(int id)
         {
             Id = id;

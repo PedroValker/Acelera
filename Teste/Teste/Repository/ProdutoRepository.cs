@@ -17,12 +17,11 @@ namespace Teste.Repository
             return Path.Combine(pastaProjeto, "cadastroProdutos", "produtos.txt");
         }
 
-        // 🔥 Atualizar Produto no arquivo txt (Agora salvando com as Tags certinhas!)
         public void AtualizarArquivoTxt()
         {
             try
             {
-                // Usando o método ObterCaminho para não repetir código
+                
                 string caminho = ObterCaminho();
                 Directory.CreateDirectory(Path.GetDirectoryName(caminho));
 
@@ -30,7 +29,7 @@ namespace Teste.Repository
 
                 foreach (var produto in MemoriaProdutos.Lista)
                 {
-                    // 🔥 FORMATO CORRIGIDO: Agora tem Nome:, Marca:, etc.
+                
                     string linha = $"Nome:{produto.Nome} | Marca:{produto.Marca} | Categoria:{produto.Categoria} | Preco:{produto.Preco} | Peso:{produto.Peso}";
                     linhasParaSalvar.Add(linha);
                 }
@@ -43,7 +42,6 @@ namespace Teste.Repository
             }
         }
 
-        // 🔥 CARREGAR DO ARQUIVO
         public void CarregarDoArquivo()
         {
             string caminho = ObterCaminho();
@@ -82,7 +80,6 @@ namespace Teste.Repository
             }
         }
 
-        // 🔥 SALVAR NA MEMÓRIA
         public bool Salvar(Produto produto, out string erro)
         {
             erro = "";
@@ -104,7 +101,6 @@ namespace Teste.Repository
 
             MemoriaProdutos.Lista.Add(produto);
 
-            // 🔥 DICA: Para garantir, já adicionamos no TXT na hora que cadastra também!
             try
             {
                 string caminho = ObterCaminho();
@@ -117,7 +113,6 @@ namespace Teste.Repository
             return true;
         }
 
-        // 🔥 SALVAR TUDO NO FINAL (Apenas redireciona para o AtualizarArquivoTxt)
         public void SalvarTudo()
         {
             AtualizarArquivoTxt();

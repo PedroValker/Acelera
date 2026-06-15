@@ -24,7 +24,6 @@ namespace Teste.ViewModel
 
             UserRepository repo = new UserRepository();
 
-            // Usando o novo método com validação
             if (!repo.Salvar(usuario, out string mensagemErro))
             {
                 throw new Exception(mensagemErro);

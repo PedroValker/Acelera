@@ -14,36 +14,28 @@ namespace Teste
         {
             base.OnStartup(e);
 
-            // 1. Carrega usuários do TXT para a memória
             UserRepository repoUsers = new UserRepository();
             repoUsers.CarregarDoArquivo();
 
-            // 2. Carrega produtos
             ProdutoRepository repoProdutos = new ProdutoRepository();
             repoProdutos.CarregarDoArquivo();
 
-            // 3. Carrega Cestas
             CestaRepository repoCestas = new CestaRepository();
             repoCestas.CarregarDoArquivo();
 
-            // 4. Carrega Carrinhos
             CarrinhoRepository repoCarrinho = new CarrinhoRepository();
             repoCarrinho.CarregarDoArquivo();
 
-            // 5. Carrega os pedidos existentes do TXT para a memória ao iniciar
             PedidoRepository repoPedidos = new PedidoRepository();
             repoPedidos.CarregarDoArquivo();
 
-            // 🛡️ CORREÇÃO: A linha que chamava repo.Atualizar(Sessao.UsuarioLogado) foi removida daqui!
-            // Não faz sentido atualizar o usuário logado antes mesmo de a tela de Login aparecer.
         }
 
         protected override void OnExit(ExitEventArgs e)
         {
             try
             {
-                // Antes de fechar o arquivo físico, garantimos que o estado atual do usuário logado na tela
-                // seja atualizado na lista estática/memória do repositório
+
                 if (Sessao.UsuarioLogado != null)
                 {
                     UserRepository repoUsers = new UserRepository();

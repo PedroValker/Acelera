@@ -26,7 +26,6 @@ namespace Teste.Repository
             return Path.Combine(pastaProjeto, "cadastroUsers", "cadastroUsers.txt");
         }
 
-        // 🚀 CARREGAR DO ARQUIVO (Versão Atualizada com FotoPerfil e Endereço)
         public void CarregarDoArquivo()
         {
             MemoriaUsuarios.Lista.Clear();
@@ -53,7 +52,6 @@ namespace Teste.Repository
                     var divisaoChaveValor = parte.Split(new[] { ':' }, 2);
                     if (divisaoChaveValor.Length == 2)
                     {
-                        // 🚀 A CORREÇÃO ESTÁ AQUI: Trim() na chave remove os espaços extras criados pelo ' | '
                         string chave = divisaoChaveValor[0].Trim();
                         string valor = divisaoChaveValor[1].Trim();
                         dadosUsuario[chave] = valor;
@@ -80,17 +78,15 @@ namespace Teste.Repository
                     user.FotoPerfil = "";
                 }
 
-                // 🚀 AGORA VAI FUNCIONAR: Como as chaves estão limpas com Trim(), o dicionário vai encontrar os campos
                 if (dadosUsuario.ContainsKey("CEP") || dadosUsuario.ContainsKey("Rua") ||
                     dadosUsuario.ContainsKey("Numero") || dadosUsuario.ContainsKey("Bairro"))
                 {
-                    // Adicionalmente, verificamos se o endereço salvo não é apenas um monte de strings vazias
+                   
                     string cep = dadosUsuario.TryGetValue("CEP", out string c) ? c : "";
                     string rua = dadosUsuario.TryGetValue("Rua", out string r) ? r : "";
                     string numero = dadosUsuario.TryGetValue("Numero", out string n) ? n : "";
                     string bairro = dadosUsuario.TryGetValue("Bairro", out string b) ? b : "";
 
-                    // Só cria o objeto se o usuário realmente tiver preenchido algo
                     if (!string.IsNullOrWhiteSpace(cep) || !string.IsNullOrWhiteSpace(rua))
                     {
                         user.Endereco = new Endereco
@@ -138,10 +134,8 @@ namespace Teste.Repository
             return true;
         }
 
-        // 🚀 CORREÇÃO: Corrigido o nome de "Atuallizar" para "Atualizar"
         public void Atualizar(User user)
         {
-            // 🟢 VALIDAÇÃO DE SEGURANÇA: Se o usuário for nulo (ex: fechou sem logar), para aqui mesmo
             if (user == null)
             {
                 Console.WriteLine("Aviso: Tentativa de atualizar um usuário nulo ignorada.");
@@ -157,15 +151,13 @@ namespace Teste.Repository
                 usuarioExistente.Email = user.Email;
                 usuarioExistente.Telefone = user.Telefone;
                 usuarioExistente.Senha = user.Senha;
-                usuarioExistente.FotoPerfil = SalvarFotoNoCaminhoAbsoluto(user.FotoPerfil); // Ajustado conforme seu print
+                usuarioExistente.FotoPerfil = SalvarFotoNoCaminhoAbsoluto(user.FotoPerfil); 
 
                 if (user.Endereco != null)
                 {
                     if (usuarioExistente.Endereco == null)
-                        usuarioExistente.Endereco = new Endereco(); // Ou o tipo correto do seu modelo de Endereço
+                        usuarioExistente.Endereco = new Endereco();
 
-                    // Mantenha suas atribuições de endereço aqui embaixo...
-                    // usuarioExistente.Endereco.CEP = user.Endereco.CEP;
                 }
             }
         }

@@ -10,10 +10,6 @@ namespace Teste.ViewModel
         {
             UserRepository repo = new UserRepository();
 
-            // ❌ APAGUE OU COMENTE A LINHA ABAIXO:
-            // repo.CarregarDoArquivo(); 
-
-            // Busca direto na memória (onde o novo usuário acabou de ser cadastrado)
             User user = repo.BuscarPorEmail(email);
 
             if (user == null)

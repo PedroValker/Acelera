@@ -92,15 +92,15 @@ namespace Teste.Model
             }
         }
 
-        // 🔥 BACKING FIELD: Variável interna para salvar o status de controle forçado pelo administrador
+        
         private string? _tipoComposicaoForçado;
 
-        // 🔥 PROPRIEDADE ATUALIZADA: Permite leitura computada E alteração direta via código
+        
         public string TipoComposicao
         {
             get
             {
-                // Se o administrador alterou o estado manualmente (ex: setou para "Preparada"), prioriza esse valor
+                
                 if (!string.IsNullOrEmpty(_tipoComposicaoForçado))
                     return _tipoComposicaoForçado;
 
@@ -132,11 +132,11 @@ namespace Teste.Model
             {
                 _tipoComposicaoForçado = value;
                 OnPropertyChanged();
-                OnPropertyChanged(nameof(IsModificada)); // Atualiza também o bool auxiliar
+                OnPropertyChanged(nameof(IsModificada)); 
             }
         }
 
-        // 🔥 ATUALIZADO: Bate com o novo comportamento
+       
         public bool IsModificada => TipoComposicao == "Modificada";
 
         private DateTime? _dataEntrega;
