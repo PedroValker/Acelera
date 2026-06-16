@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-using System.Linq; // <-- IMPORTANTE: Adicione o LINQ aqui em cima
+using System.Linq; 
 using Teste.Model;
 
 namespace Teste.View
@@ -12,9 +12,7 @@ namespace Teste.View
 
             TituloCesta.Text = $"Cesta: {cesta.Nome}";
 
-            // AGROUPAMENTO COM LINQ:
-            // Agrupamos os itens por Nome, Marca, Peso e Preco.
-            // Depois, contamos quantos itens repetidos existem em cada grupo.
+         
             var itensAgrupados = cesta.Itens
                 .GroupBy(i => new { i.Nome, i.Marca, i.Peso, i.Preco })
                 .Select(grupo => new
@@ -27,7 +25,6 @@ namespace Teste.View
                 })
                 .ToList();
 
-            // Envia a nova lista agrupada para o ListView
             ListaProdutosCesta.ItemsSource = itensAgrupados;
         }
 

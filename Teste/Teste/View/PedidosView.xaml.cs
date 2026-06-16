@@ -15,14 +15,12 @@ namespace Teste.View
         {
             InitializeComponent();
 
-            // 🚀 VÍNCULO POR ID: Envia o ID numérico único do usuário logado para a ViewModel
             if (Sessao.UsuarioLogado != null)
             {
                 this.DataContext = new PedidosViewModel(Sessao.UsuarioLogado.Id);
             }
         }
 
-        // 🟢 ABA 1: PEDIDOS PENDENTES
         private void AbaPendentes_Click(object sender, MouseButtonEventArgs e)
         {
             if (DataContext is PedidosViewModel vm)
@@ -34,7 +32,6 @@ namespace Teste.View
             AlternarVisualAbas(AbaPendentesTexto, AbaCaminhoTexto, AbaHistoricoTexto);
         }
 
-        // 🔵 ABA 2: PEDIDOS A CAMINHO (Nova Rota Logística)
         private void AbaCaminho_Click(object sender, MouseButtonEventArgs e)
         {
             if (DataContext is PedidosViewModel vm)
@@ -45,8 +42,6 @@ namespace Teste.View
 
             AlternarVisualAbas(AbaCaminhoTexto, AbaPendentesTexto, AbaHistoricoTexto);
         }
-
-        // 🔴 ABA 3: HISTÓRICO / ENTREGUES
         private void AbaHistorico_Click(object sender, MouseButtonEventArgs e)
         {
             if (DataContext is PedidosViewModel vm)
@@ -58,14 +53,11 @@ namespace Teste.View
             AlternarVisualAbas(AbaHistoricoTexto, AbaPendentesTexto, AbaCaminhoTexto);
         }
 
-        // 🎨 GERENCIADOR VISUAL DE ABAS (Padrão SaaS Moderno)
         private void AlternarVisualAbas(TextBlock ativa, TextBlock inativa1, TextBlock inativa2)
         {
-            // Aba ativa ganha destaque em negrito e cor escura (#0F172A)
             ativa.FontWeight = FontWeights.Bold;
             ativa.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#0F172A"));
 
-            // Abas inativas ficam com fonte normal e cor cinza suave (#94A3B8)
             inativa1.FontWeight = FontWeights.Normal;
             inativa1.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#94A3B8"));
 

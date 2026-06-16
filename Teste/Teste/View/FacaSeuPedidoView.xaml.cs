@@ -10,7 +10,6 @@ namespace Teste.View
 {
     public partial class FacaSeuPedidoView : UserControl
     {
-        // Retorna ao evento simples passando o objeto Cesta diretamente
         public event Action<Cesta> CestaSelecionada;
         public ObservableCollection<Cesta> ListaCestas { get; set; }
 
@@ -28,7 +27,6 @@ namespace Teste.View
         {
             if (sender is Button botao && botao.DataContext is Cesta cesta)
             {
-                // Dispara o evento apenas enviando a cesta que foi clicada
                 CestaSelecionada?.Invoke(cesta);
             }
         }

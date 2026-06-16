@@ -22,7 +22,6 @@ namespace Teste
             string senha = SenhaBox.Password;
             string confirmarSenha = ConfirmarSenhaBox.Password;
 
-            // 🔥 VALIDAÇÃO DE CAMPOS VAZIOS
             if (string.IsNullOrWhiteSpace(nome) ||
                 string.IsNullOrWhiteSpace(email) ||
                 string.IsNullOrWhiteSpace(telefone) ||
@@ -32,15 +31,12 @@ namespace Teste
                 MessageBox.Show("Preencha todos os campos!");
                 return;
             }
-
-            // 🔥 VALIDAÇÃO DO GMAIL
             if (!EmailValido(email))
             {
                 MessageBox.Show("E-mail inválido! O cadastro permite apenas contas @gmail.com");
                 return;
             }
 
-            // 🔥 VALIDAÇÃO DO TELEFONE
             if (!TelefoneValido(telefone))
             {
                 MessageBox.Show("Telefone inválido! Digite o DDD + Número (10 ou 11 dígitos).");
@@ -53,7 +49,6 @@ namespace Teste
                 return;
             }
 
-            // 🔥 VERIFICA DUPLICIDADE
             foreach (var u in MemoriaUsuarios.Lista)
             {
                 if (u.Email.Equals(email, StringComparison.OrdinalIgnoreCase))
@@ -62,8 +57,6 @@ namespace Teste
                     return;
                 }
             }
-
-            // 🔥 CRIA USUÁRIO
             User user = new User
             {
                 Nome = nome,
@@ -73,22 +66,18 @@ namespace Teste
                 DataCriacao = DateTime.Now
             };
 
-            // 🔥 SALVA NA MEMÓRIA
             MemoriaUsuarios.Lista.Add(user);
             MessageBox.Show("Conta criada com sucesso!");
 
-            // abre login
             Login login = new Login();
             login.Show();
 
             this.Close();
         }
 
-        // Método atualizado para aceitar apenas @gmail.com
         private bool EmailValido(string email)
         {
             string emailMinusculo = email.ToLower().Trim();
-            // Garante o formato correto e o final fixo @gmail.com
             string pattern = @"^[^@\s]+@gmail\.com$";
             return Regex.IsMatch(emailMinusculo, pattern);
         }

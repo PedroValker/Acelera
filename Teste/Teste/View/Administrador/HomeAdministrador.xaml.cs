@@ -16,11 +16,9 @@ namespace Teste.View
             BoasVindasTexto.Text =
                 $"Bem-vindo de volta, {nomeAdmin}! Aqui está o resumo de hoje.";
 
-            // CARREGA O TXT
             PedidoRepository repo = new PedidoRepository();
             repo.CarregarDoArquivo();
 
-            // AGORA MONTA O DASHBOARD
             CarregarDashboard();
         }
 
@@ -38,16 +36,7 @@ namespace Teste.View
               p.Status.Trim().ToLower() != "entregue")
               .ToString();
 
-            // Pedidos entregues
-            //TxtPedidosEntregues.Text = pedidos.Count(p =>
-            //  p.Status != null &&
-            //p.Status.ToLower() == "entregue")
-            //.ToString();
-
-            // Pagamentos pendentes
-          
-            // Pedidos não pagos
-            // Pagamentos pendentes
+        
             TxtPagPendentes.Text = pedidos.Count(p => !p.Pago).ToString();
 
             // Faturamento total

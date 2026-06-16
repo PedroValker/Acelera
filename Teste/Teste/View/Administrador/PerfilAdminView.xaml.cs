@@ -5,8 +5,8 @@ using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
-using Teste.Model;      // 🚀 Ajuste para o seu namespace da Model de Usuários/Sessão
-using Teste.Repository; // 🚀 Ajuste para o seu namespace do UserRepository
+using Teste.Model;      
+using Teste.Repository; 
 
 namespace Teste.View.Administrador
 {
@@ -24,12 +24,12 @@ namespace Teste.View.Administrador
         {
             if (Sessao.UsuarioLogado != null)
             {
-                // Preenche os campos de texto com o que já está salvo
+              
                 TxtNome.Text = Sessao.UsuarioLogado.Nome;
                 TxtEmail.Text = Sessao.UsuarioLogado.Email;
                 TxtTelefone.Text = Sessao.UsuarioLogado.Telefone;
 
-                // Carrega a foto na visualização interna se ela existir
+    
                 if (!string.IsNullOrEmpty(Sessao.UsuarioLogado.FotoPerfil) && File.Exists(Sessao.UsuarioLogado.FotoPerfil))
                 {
                     try
@@ -64,7 +64,7 @@ namespace Teste.View.Administrador
                     imagemNova.EndInit();
 
                     ImgPerfilPreview.ImageSource = imagemNova;
-                    _caminhoFotoTemporaria = abrir.FileName; // Guarda o caminho escolhido temporariamente
+                    _caminhoFotoTemporaria = abrir.FileName;
                 }
                 catch (Exception ex)
                 {
@@ -77,14 +77,13 @@ namespace Teste.View.Administrador
         {
             if (Sessao.UsuarioLogado != null)
             {
-                // Validação simples
+
                 if (string.IsNullOrWhiteSpace(TxtNome.Text))
                 {
                     MessageBox.Show("O campo Nome não pode ficar vazio.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
                     return;
                 }
 
-                // 1. Atualiza o objeto na memória da Sessão ativa
                 Sessao.UsuarioLogado.Nome = TxtNome.Text;
                 Sessao.UsuarioLogado.Email = TxtEmail.Text;
                 Sessao.UsuarioLogado.Telefone = TxtTelefone.Text;
@@ -92,7 +91,7 @@ namespace Teste.View.Administrador
 
                 MessageBox.Show("Informações salvas com sucesso! As alterações serão aplicadas permanentemente ao fechar o sistema.", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                // Opcional: Força a atualização do nome no menu lateral se a janela mãe estiver aberta
+
                 var janelaPrincipal = Window.GetWindow(this) as Teste.View.PrincipalAdministrador;
                 if (janelaPrincipal != null)
                 {

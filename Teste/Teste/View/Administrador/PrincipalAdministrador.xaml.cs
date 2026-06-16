@@ -50,13 +50,11 @@ namespace Teste.View
             ConteudoPrincipal.Content = new HomeAdministrador(_nomeDoAdmin);
         }
 
-        // 🚀 NOVO: Abre a tela de Edição de Perfil quando clicar no botão de engrenagem
         private void Perfil_Click(object sender, RoutedEventArgs e)
         {
             ConteudoPrincipal.Content = new PerfilAdminView();
         }
 
-        // 🚀 NOVO: Abre a tela de Edição de Perfil quando clicar em cima da foto ou do nome
         private void AbrirPerfil_Click(object sender, MouseButtonEventArgs e)
         {
             ConteudoPrincipal.Content = new PerfilAdminView();
@@ -64,7 +62,7 @@ namespace Teste.View
 
         private void AlterarFoto_Click(object sender, MouseButtonEventArgs e)
         {
-            // Substituído para direcionar ao fluxo centralizado de Perfil
+
             ConteudoPrincipal.Content = new PerfilAdminView();
         }
 
@@ -97,7 +95,7 @@ namespace Teste.View
 
         private void Sandy_Click(object sender, RoutedEventArgs e)
         {
-            // Espaço reservado
+
         }
 
         private void Pendencias_Click(object sender, RoutedEventArgs e)
@@ -112,7 +110,7 @@ namespace Teste.View
 
         private void Estatisticas_Click(object sender, RoutedEventArgs e)
         {
-            // Espaço reservado para View de Relatórios/Estatísticas
+
         }
 
         private void Clientes_Click(object sender, RoutedEventArgs e)

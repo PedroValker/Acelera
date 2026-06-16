@@ -75,7 +75,6 @@ namespace Teste
                     return;
                 }
 
-                // 🔥 LINHA NOVA: Salva o usuário encontrado (com o ID correto) na sessão global
                 Sessao.UsuarioLogado = user;
 
                 MessageBox.Show($"Bem-vindo, {user.Nome}!");
@@ -87,7 +86,6 @@ namespace Teste
                 }
                 else
                 {
-                    // Se sua tela principal precisar do ID, você já pode pegar de Sessao.UsuarioLogado.Id
                     tela = new TelaPrincipalCliente(user);
                 }
 

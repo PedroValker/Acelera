@@ -68,7 +68,6 @@ namespace Teste.View
                 MessageBox.Show("Produto cadastrado com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
             }
 
-            // 3. Limpa a tela e atualiza a tabela
             LimparCampos();
             AtualizarLista();
         }
@@ -97,8 +96,7 @@ namespace Teste.View
                         break;
                     }
                 }
-
-                // Dica: Você pode mudar o texto do botão de "Salvar" para "Atualizar" aqui se quiser
+         
             }
         }
 
@@ -113,17 +111,12 @@ namespace Teste.View
 
                 if (resposta == MessageBoxResult.Yes)
                 {
-                    // 1. Remove da lista (Memória)
                     MemoriaProdutos.Lista.Remove(produtoClicado);
-
-                    // 2. Atualiza o arquivo (Disco)
                     ProdutoRepository repo = new ProdutoRepository();
                     repo.AtualizarArquivoTxt();
+                   AtualizarLista();
 
-                    // 3. Atualiza a tela
-                    AtualizarLista();
 
-                    // Se o produto que excluímos era o que estava sendo editado, limpamos a edição
                     if (_produtoEmEdicao == produtoClicado)
                     {
                         _produtoEmEdicao = null;

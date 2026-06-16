@@ -112,7 +112,6 @@ namespace Teste.View
 
         public void AtualizarEnderecoNaTela()
         {
-            // Busca simplificada direta (evita falhas com o FindName em Grids proporcionais)
             if (EnderecoTextBlock != null)
             {
                 if (Sessao.UsuarioLogado != null && Sessao.UsuarioLogado.Endereco != null)

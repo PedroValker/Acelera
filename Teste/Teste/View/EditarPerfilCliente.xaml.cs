@@ -63,20 +63,16 @@ namespace Teste.View
             }
         }
 
-        // 🚀 NOVO: Captura a digitação e consulta a API de CEP automaticamente ao chegar a 8 dígitos
         private async void TxtCEP_TextChanged(object sender, TextChangedEventArgs e)
         {
-            // Remove traços ou espaços que o usuário possa digitar
             string cepLimpo = TxtCEP.Text.Replace("-", "").Replace(" ", "").Trim();
 
-            // A API do ViaCEP exige exatamente 8 dígitos numéricos
             if (cepLimpo.Length == 8)
             {
                 try
                 {
                     using (HttpClient client = new HttpClient())
                     {
-                        // Faz a requisição assíncrona para não congelar o layout do software
                         string url = $"https://viacep.com.br/ws/{cepLimpo}/json/";
                         HttpResponseMessage response = await client.GetAsync(url);
 
@@ -84,7 +80,6 @@ namespace Teste.View
                         {
                             string jsonResult = await response.Content.ReadAsStringAsync();
 
-                            // Tratamento de string simples para não te obrigar a instalar pacotes adicionais como Newtonsoft.Json
                             if (jsonResult.Contains("\"erro\": true") || jsonResult.Contains("\"erro\":\"true\""))
                             {
                                 MessageBox.Show("CEP não encontrado base de dados dos Correios.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -92,15 +87,12 @@ namespace Teste.View
                                 return;
                             }
 
-                            // Extrai os valores das tags do JSON de forma manual e segura
                             string logradouro = ExtrairValorJson(jsonResult, "logradouro");
                             string bairro = ExtrairValorJson(jsonResult, "bairro");
 
-                            // Injeta os dados direto nas caixas de texto
                             TxtRua.Text = logradouro;
                             TxtBairro.Text = bairro;
 
-                            // Move o foco do teclado direto para o Número para agilizar o preenchimento do cliente
                             TxtNumero.Focus();
                         }
                     }
@@ -112,7 +104,6 @@ namespace Teste.View
             }
         }
 
-        // Método auxiliar para ler o JSON sem dependências externas
         private string ExtrairValorJson(string json, string chave)
         {
             try

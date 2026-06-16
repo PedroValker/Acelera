@@ -17,18 +17,14 @@ namespace Teste.View
 
             _pedidoAtual = pedido;
 
-            // 1. Vincula o Pedido ao DataContext para alimentar todos os {Binding ...} do XAML automaticamente
             this.DataContext = pedido;
 
-            // 2. Monta a lista da Composição Final da Cesta baseando-se nos itens do pedido
             var listaItensFinais = new List<object>();
 
             foreach (var itemPedido in pedido.Itens)
             {
-                // Busca na memória a cesta correspondente para rastrear os produtos originais
                 var cestaOriginal = MemoriaCestas.Lista.FirstOrDefault(c => c.Nome == itemPedido.Nome);
 
-                // Se a cesta não for encontrada (excluída ou alterada), exibe uma mensagem de aviso
                 string nomeProduto = cestaOriginal != null ? cestaOriginal.ResumoItens : "Produtos indisponíveis (Cesta excluída/alterada).";
 
                 listaItensFinais.Add(new
@@ -38,13 +34,9 @@ namespace Teste.View
                 });
             }
 
-            // 3. Alimenta o novo DataGrid principal da sua interface
             GridItensFinais.ItemsSource = listaItensFinais;
-
-            // 4. Configuração dos Badges Visuais com base no tipo do pedido
             ConfigurarBadges(pedido);
-
-            // 🔥 5. CORREÇÃO CRÍTICA: Agora verifica o status OU se a string da composição é "Modificada"
+         
             if ((pedido.Status != null && pedido.Status.Equals("Modificado", StringComparison.OrdinalIgnoreCase)) ||
                 (pedido.TipoComposicao != null && pedido.TipoComposicao.ToLower().Contains("modificad")))
             {
@@ -65,7 +57,7 @@ namespace Teste.View
 
                 string composicaoLower = pedido.TipoComposicao.ToLower();
 
-                // 🔥 NOVA VALIDAÇÃO: Se virar "Preparada", aplica o azul de sucesso/completa
+                // Se virar "Preparada", aplica o azul de sucesso/completa
                 if (composicaoLower.Contains("preparada"))
                 {
                     BadgeComposicao.Background = new System.Windows.Media.SolidColorBrush((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString("#E0F2FE")); // Azul suave (Sky-100)
@@ -97,7 +89,7 @@ namespace Teste.View
 
                 if (resultado == MessageBoxResult.Yes)
                 {
-                    // 🛠️ CORREÇÃO LOGÍSTICA: O Status continua "Pendente", mas registramos que a montagem foi feita!
+                    //  O Status continua "Pendente", mas registramos que a montagem foi feita!
                     _pedidoAtual.StatusMontagem = "Pronta";
 
                     MessageBox.Show("Cesta marcada como Montada/Pronta com sucesso!",

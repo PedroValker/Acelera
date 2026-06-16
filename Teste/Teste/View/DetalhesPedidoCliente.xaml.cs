@@ -32,7 +32,7 @@ namespace Teste.View
             _pedidoAtual = pedido;
             DataContext = _pedidoAtual;
 
-            // Ajuste automático de endereço em memória se estiver vazio
+          
             if (string.IsNullOrWhiteSpace(_pedidoAtual.Endereco) || _pedidoAtual.Endereco.Equals("A combinar", StringComparison.OrdinalIgnoreCase))
             {
                 if (Sessao.UsuarioLogado != null && Sessao.UsuarioLogado.Endereco != null)
@@ -42,11 +42,10 @@ namespace Teste.View
                 }
             }
 
-            // Atualiza os dados na tela
+
             this.DataContext = null;
             this.DataContext = _pedidoAtual;
 
-            // Executa as lógicas de interface e permissões
             SystematizarEGradeLogica();
          
         }

@@ -71,7 +71,7 @@ namespace CestaApp.Views
             ProdutosDaCesta = new ObservableCollection<Produto>();
             _quantidadesOriginaisFabrica.Clear();
 
-            // 🚀 AUTOMÁTICO: Resgata as informações cadastrais de endereço em memória do usuário ativo
+          
             if (Sessao.UsuarioLogado != null && Sessao.UsuarioLogado.Endereco != null)
             {
                 var end = Sessao.UsuarioLogado.Endereco;
@@ -192,8 +192,7 @@ namespace CestaApp.Views
             var cestaOriginalDoBanco = MemoriaCestas.Lista.FirstOrDefault(c => c.Id == CestaAtual.Id);
             string nomeVerdadeiroDaCesta = cestaOriginalDoBanco?.Nome ?? CestaAtual.Nome;
             decimal precoFinalCesta = this.ValorTotalCesta;
-
-            // 🟢 CORREÇÃO: Propriedade 'Endereco' removida daqui de dentro para parar o erro de compilação
+   
             Cesta cestaClonadaParaCarrinho = new Cesta(CestaAtual.Id)
             {
                 Nome = nomeVerdadeiroDaCesta,
@@ -201,20 +200,16 @@ namespace CestaApp.Views
                 ImagemPath = CestaAtual.ImagemPath,
                 Itens = listaFinalParaCarrinho
             };
-
-            // 🚀 SOLUÇÃO: O endereço da tela agora deve ser associado ao ItemCarrinho.
-            // Certifique-se de que sua classe 'ItemCarrinho' tenha a propriedade 'EnderecoEntrega'.
             ItemCarrinho novoItem = new ItemCarrinho
             {
                 CestaSelecionada = cestaClonadaParaCarrinho,
                 Quantidade = 1,
                 Observacoes = this.Observacoes,
-                EnderecoEntrega = this.EnderecoEntrega // Atribuição correta na classe de transporte do carrinho
+                EnderecoEntrega = this.EnderecoEntrega 
             };
 
             MemoriaCarrinho.Itens.Add(novoItem);
 
-            // 🚀 O GATILHO VISUAL: Localiza a janela mãe aberta e executa a atualização do Badge
             var janelaMae = Window.GetWindow(this) as Teste.View.TelaPrincipalCliente;
             if (janelaMae != null)
             {
